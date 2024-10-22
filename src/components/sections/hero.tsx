@@ -109,7 +109,7 @@ function HeroCTA() {
             "w-full sm:w-auto text-background flex gap-2"
           )}
         >
-          <Icons.logo className="h-6 w-6" />
+          <Icons.palmTreeLogo className="h-6 w-6" />
          Contact Us
         </Link>
       </motion.div>

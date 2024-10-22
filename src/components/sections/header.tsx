@@ -41,7 +41,7 @@ export default function Header() {
           title="brand-logo"
           className="relative mr-6 flex items-center space-x-2"
         >
-          <Icons.logo className="w-auto h-[40px]" />
+          <Icons.palmTreeLogo className="w-auto h-[40px]" />
           <span className="font-bold text-xl">{siteConfig.name}</span>
         </Link>
 
@@ -60,7 +60,7 @@ export default function Header() {
                   "w-full sm:w-auto text-background flex gap-2"
                 )}
               >
-                <Icons.logo className="h-6 w-6" />
+                <Icons.palmTreeLogo className="h-6 w-6" />
                 Contact Us
               </Link>
             </div>

@@ -12,7 +12,7 @@ export default function Footer() {
           title={siteConfig.name}
           className="relative mr-6 flex items-center space-x-2"
         >
-          <Icons.logo className="w-auto h-[40px]" />
+          <Icons.palmTreeLogo className="w-auto h-[40px]" />
           <span className="font-bold text-xl">{siteConfig.name}</span>
         </a>
 
