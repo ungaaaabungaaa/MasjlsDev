@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 
@@ -269,52 +269,19 @@ export const siteConfig = {
       ),
     },
   ],
-  footer: [
-    {
-      title: "Product",
-      links: [
-        { href: "#", text: "Features", icon: null },
-        { href: "#", text: "Pricing", icon: null },
-        { href: "#", text: "Documentation", icon: null },
-        { href: "#", text: "API", icon: null },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { href: "#", text: "About Us", icon: null },
-        { href: "#", text: "Careers", icon: null },
-        { href: "#", text: "Blog", icon: null },
-        { href: "#", text: "Press", icon: null },
-        { href: "#", text: "Partners", icon: null },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { href: "#", text: "Community", icon: null },
-        { href: "#", text: "Contact", icon: null },
-        { href: "#", text: "Support", icon: null },
-        { href: "#", text: "Status", icon: null },
-      ],
-    },
+  footer: [ 
     {
       title: "Social",
       links: [
         {
-          href: "#",
-          text: "Twitter",
-          icon: <FaTwitter />,
-        },
-        {
-          href: "#",
+          href: "https://www.instagram.com/majlisdev/",
           text: "Instagram",
           icon: <RiInstagramFill />,
         },
         {
-          href: "#",
-          text: "Youtube",
-          icon: <FaYoutube />,
+          href: "https://github.com/MajlisDevTM",
+          text: "Github",
+          icon: <FaGithub />,
         },
       ],
     },
