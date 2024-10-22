@@ -11,7 +11,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+		center: true, // Change 'true' (string) to true (boolean)
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
