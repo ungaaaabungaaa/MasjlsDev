@@ -119,7 +119,7 @@ function HeroCTA() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0, duration: 0.8 }}
       >
-        We're here to guide and help you at all times.
+        We&apos;re here to guide and help you at all times.
       </motion.p>
     </>
   );
