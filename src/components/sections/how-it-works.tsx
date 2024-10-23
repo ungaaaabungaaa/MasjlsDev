@@ -8,7 +8,7 @@ const data = [
     title: "1. Submit Your Idea",
     content:
       "Upload your app concept, website, business plan, or SaaS idea to our secure platform. We welcome various formats and details to ensure a smooth integration with your vision.",
-    image: "/dashboard.png",
+    image: "/idea.jpg",
     icon: <Upload className="w-6 h-6 text-primary" />,
   },
   {
@@ -16,7 +16,7 @@ const data = [
     title: "2.  Quick Response from Our Experts",
     content:
       "Our dedicated team of experts will review your submission and respond within moments, providing insights and guidance tailored to your needs.",
-    image: "/dashboard.png",
+    image: "/comunnication.png",
     icon: <Zap className="w-6 h-6 text-primary" />,
   },
   {
@@ -24,7 +24,7 @@ const data = [
     title: "3. Receive Your Prototype and Consultation",
     content:
       "Get a prototype, consultation, or creative ideas on how your project will be developed, all while considering the budget you’ve specified. Leverage our expertise to bring your vision to life effectively.",
-    image: "/dashboard.png",
+    image: "/colab.png",
     icon: <Sparkles className="w-6 h-6 text-primary" />,
   },
 ];
