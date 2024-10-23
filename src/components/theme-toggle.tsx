@@ -6,8 +6,7 @@ import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
-  // Don't show in production
-  if (process.env.NODE_ENV === "production") return null;
+  
   return (
     <Button
       variant="ghost"
