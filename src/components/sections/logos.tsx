@@ -2,24 +2,72 @@ import Marquee from "@/components/magicui/marquee";
 import Image from "next/image";
 
 const techStack = [
-  { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-  { name: "Next.js", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" },
-  { name: "GitHub", logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" },
- 
-  { name: "Node.js", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
-  { name: "Express", logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
-  { name: "MySQL", logo: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" },
-  { name: "Redis", logo: "https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg" },
-  { name: "GraphQL", logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg" },
-  { name: "Webpack", logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg" },
+  {
+    name: "React",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  },
+  {
+    name: "Next.js",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+  },
+  {
+    name: "GitHub",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+  },
+
+  {
+    name: "Node.js",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+  },
+  {
+    name: "Express",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+  },
+  {
+    name: "MySQL",
+    logo: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
+  },
+  {
+    name: "Redis",
+    logo: "https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg",
+  },
+  {
+    name: "GraphQL",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+  },
+  {
+    name: "Webpack",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg",
+  },
   { name: "Vite", logo: "https://vitejs.dev/logo.svg" },
-  { name: "Tailwind CSS", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
-  { name: "Sass", logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" },
-  { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-  { name: "Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" },
-  { name: "Nginx", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg" },
-  { name: "Flutter", logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" },
-  { name: "Django", logo: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" }
+  {
+    name: "Tailwind CSS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
+  {
+    name: "Sass",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
+  },
+  {
+    name: "AWS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  },
+  {
+    name: "Azure",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+  },
+  {
+    name: "Nginx",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg",
+  },
+  {
+    name: "Flutter",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
+  },
+  {
+    name: "Django",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg",
+  },
 ];
 
 export default function Logos() {
@@ -27,7 +75,7 @@ export default function Logos() {
     <section id="logos">
       <div className="container mx-auto px-4 md:px-8 py-12">
         <h3 className="text-center text-sm font-semibold text-gray-500">
-          Tech Stack We Use
+          المكدس التكنولوجي الذي نستخدمه
         </h3>
         <div className="relative mt-6">
           <Marquee className="max-w-full [--duration:40s]">

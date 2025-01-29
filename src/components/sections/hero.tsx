@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import HeroVideoDialog from "@/components/magicui/hero-video";
-import { CoolMode }  from "@/components/ui/cool-mode";
+import { CoolMode } from "@/components/ui/cool-mode";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -21,14 +21,13 @@ function HeroPill() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease }}
     >
-      
       <CoolMode>
-      <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-center text-xs font-medium text-primary sm:text-sm">
-       ✨ Creative Innovation
-      </div>
+        <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-center text-xs font-medium text-primary sm:text-sm">
+          ✨الابتكار الإبداعي
+        </div>
       </CoolMode>
       <p className="text-xs font-medium text-primary sm:text-sm">
-        Introducing MajlisDev
+        تقديم MajlisDev
       </p>
       <svg
         width="12"
@@ -43,7 +42,6 @@ function HeroPill() {
           fill="hsl(var(--primary))"
         />
       </svg>
-      
     </motion.a>
   );
 }
@@ -61,7 +59,7 @@ function HeroTitles() {
           staggerChildren: 0.2,
         }}
       >
-        {["From", "Dessert", "Sands", "To Digital Dreams"].map((text, index) => (
+        {["من رمال الحلوى إلى الأحلام الرقمية"].map((text, index) => (
           <motion.span
             key={index}
             className="inline-block px-1 md:px-2 text-balance font-semibold"
@@ -87,7 +85,8 @@ function HeroTitles() {
           ease,
         }}
       >
-        We blend artistry with technology to craft captivating digital experiences. From concept to creation, we turn imagination into innovation
+        نحن نمزج بين الفن والتكنولوجيا لصياغة رقمية آسرة الخبرات. من المفهوم إلى
+        الإبداع، نحول الخيال إلى ابتكار
       </motion.p>
     </div>
   );
@@ -110,7 +109,7 @@ function HeroCTA() {
           )}
         >
           <Icons.palmTreeLogo className="h-6 w-6" />
-         Contact Us
+          اتصل بنا
         </Link>
       </motion.div>
       <motion.p
@@ -119,7 +118,7 @@ function HeroCTA() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0, duration: 0.8 }}
       >
-        We&apos;re here to guide and help you at all times.
+        نحن هنا لإرشادك ومساعدتك في جميع الأوقات
       </motion.p>
     </>
   );

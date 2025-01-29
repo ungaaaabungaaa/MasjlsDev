@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>{" "}
             - {siteConfig.description}
           </span>
-          <ul className="flex justify-start md:justify-end text-sm tracking-tight text-foreground">
+          {/* <ul className="flex justify-start md:justify-end text-sm tracking-tight text-foreground">
             <li className="mr-3 md:mx-4">
               <Link href="#" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
@@ -56,7 +56,7 @@ export default function Footer() {
                 Terms of Service
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </footer>

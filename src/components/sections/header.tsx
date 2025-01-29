@@ -52,7 +52,6 @@ export default function Header() {
             </nav>
 
             <div className="gap-2 flex">
-              
               <Link
                 href="/signup"
                 className={cn(
@@ -61,7 +60,7 @@ export default function Header() {
                 )}
               >
                 <Icons.palmTreeLogo className="h-6 w-6" />
-                Contact Us
+                اتصل بنا
               </Link>
             </div>
           </div>

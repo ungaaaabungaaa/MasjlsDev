@@ -1,17 +1,51 @@
 import { Icons } from "@/components/icons";
-import { FaGithub, FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-
-
 
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
   name: "MajlisDev",
-  description: "From Dessert Sands To Digital Dreams",
+  description: "من رمال الحلوى إلى الأحلام الرقمية",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["SaaS", "Template", "Next.js", "React", "Tailwind CSS" , "Web Development" ,"Mobile App Development ", "UI/UX Design ","Graphic Design","Branding","Digital Marketing","Custom Websites","E-Commerce Solutions","Full-Stack Development","Responsive Design","Creative Agency","SEO Optimization", "WordPress Development", "Logo Design","User Experience (UX)","User Interface (UI)", "Frontend Development","Backend Development", "Content Management Systems (CMS)", "Modern Web Design ", "Startup Solutions ","Visual Identity","Mobile-First Design","Prototyping","Web Applications","Interactive Design","Cloud Integration","SaaS Development","API Integration","Website Redesign","Branding Strategy"],
+  keywords: [
+    "SaaS",
+    "Template",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Web Development",
+    "Mobile App Development ",
+    "UI/UX Design ",
+    "Graphic Design",
+    "Branding",
+    "Digital Marketing",
+    "Custom Websites",
+    "E-Commerce Solutions",
+    "Full-Stack Development",
+    "Responsive Design",
+    "Creative Agency",
+    "SEO Optimization",
+    "WordPress Development",
+    "Logo Design",
+    "User Experience (UX)",
+    "User Interface (UI)",
+    "Frontend Development",
+    "Backend Development",
+    "Content Management Systems (CMS)",
+    "Modern Web Design ",
+    "Startup Solutions ",
+    "Visual Identity",
+    "Mobile-First Design",
+    "Prototyping",
+    "Web Applications",
+    "Interactive Design",
+    "Cloud Integration",
+    "SaaS Development",
+    "API Integration",
+    "Website Redesign",
+    "Branding Strategy",
+  ],
   links: {
     email: "support@majlisdev.com",
     twitter: "#",
@@ -21,255 +55,258 @@ export const siteConfig = {
   },
   header: [
     {
-      trigger: "Features",
+      trigger: "سمات",
       content: {
         main: {
           icon: <Icons.react className="h-6 w-6" />,
-          title: "Web Design & Development",
-          description: "Building responsive websites that engage and convert.",
+          title: "تصميم وتطوير الويب",
+          description: "بناء مواقع ويب سريعة الاستجابة تشارك وتحول.",
           href: "#",
         },
         items: [
           {
             href: "#",
-            title: "Digital Marketing",
-            description: "Driving growth with data-driven online campaigns",
+            title: "التسويق الرقمي",
+            description:
+              "دفع النمو من خلال الحملات عبر الإنترنت المستندة إلى البيانات",
           },
           {
             href: "#",
-            title: "Brand Strategy",
-            description: "Crafting unique identities that resonate with your audience.",
+            title: "استراتيجية العلامة التجارية",
+            description: "صياغة هويات فريدة من نوعها يتردد صداها مع جمهورك.",
           },
           {
             href: "#",
-            title: "Content Creation",
-            description: "Developing impactful visuals and stories that elevate your brand",
+            title: "إنشاء المحتوى",
+            description: "تطوير صور وقصص مؤثرة ترفع من علامتك التجارية",
           },
         ],
       },
     },
     {
-      trigger: "Solutions",
+      trigger: "الحلول",
       content: {
         items: [
           {
-            title: "E-commerce Solutions",
-            href: "#",
-            description: "Streamlining online stores for seamless shopping experiences.",
-          },
-          {
-            title: "Social Media Management",
-            href: "#",
-            description: "Boosting engagement through tailored content and strategies.",
-          },
-          {
-            title: "SEO Optimization",
-            href: "#",
-            description: "Enhancing visibility with targeted search engine techniques.",
-          },
-          {
-            title: "UI/UX Design",
-            href: "#",
-            description: "Crafting user-friendly interfaces that improve customer journeys.",
-          },
-          {
-            title: "Video Production",
-            href: "#",
-            description: "Creating compelling visual stories that captivate audiences.",
-          },
-          {
-            title: "Email Marketing",
+            title: "حلول التجارة الإلكترونية",
             href: "#",
             description:
-              "Driving conversions with personalized, impactful campaigns.",
+              "تبسيط المتاجر عبر الإنترنت للحصول على تجارب تسوق سلسة",
+          },
+          {
+            title: "إدارة وسائل التواصل الاجتماعي",
+            href: "#",
+            description: "تعزيز المشاركة من خلال محتوى واستراتيجيات مخصصة",
+          },
+          {
+            title: "تحسين محركات البحث",
+            href: "#",
+            description: "تعزيز الرؤية باستخدام تقنيات محركات البحث المستهدفة",
+          },
+          {
+            title: "تصميم واجهة المستخدم/تجربة المستخدم",
+            href: "#",
+            description:
+              "صياغة واجهات سهلة الاستخدام تعمل على تحسين رحلات العملاء",
+          },
+          {
+            title: "إنتاج الفيديو",
+            href: "#",
+            description: "إنشاء قصص مرئية مقنعة تأسر الجماهير",
+          },
+          {
+            title: "التسويق عبر البريد الإلكتروني",
+            href: "#",
+            description: "زيادة التحويلات من خلال حملات مخصصة ومؤثرة",
           },
         ],
       },
     },
     {
       href: "/blog",
-      label: "Projects",
+      label: "المشاريع",
     },
   ],
   pricing: [
     {
-      name: "Silver Package",
+      name: "الباقة الفضية",
       href: "#",
       price: "1600",
       period: "SAR",
       yearlyPrice: "4000",
       features: [
-        "Custom website design (up to 5 pages)",
-        "Basic SaaS application setup",
-        "Simple mobile app development",
-        "Basic eCommerce website setup",
-        "Limited client changes Upto 20",
-        "Basic API integration",
-        "Source code sharing",
-        "1-month social media management",
-        "Performance Report",
-        "Seo Report",
-        "Logo design and branding consultation"
+        "تصميم موقع مخصص (حتى 5 صفحات)",
+        "إعداد تطبيق SaaS الأساسي",
+        "تطوير تطبيقات الهاتف المحمول بسيطة",
+        "الإعداد الأساسي لموقع التجارة الإلكترونية",
+        "تغييرات العميل محدودة تصل إلى 20",
+        "تكامل واجهة برمجة التطبيقات الأساسية",
+        "مشاركة كود المصدر",
+        "إدارة مواقع التواصل الاجتماعي لمدة شهر",
+        "تقرير الأداء",
+        "تقرير سيو",
+        "تصميم الشعار واستشارات العلامات التجارية",
       ],
-      description: "Perfect for individuals and small projects",
-      buttonText: "Subscribe",
+      description: "مثالية للأفراد والمشاريع الصغيرة",
+      buttonText: "ابدأ الآن",
       isPopular: false,
     },
     {
-      name: "Golden Package",
+      name: "الباقة الذهبية",
       href: "#",
       price: "4200",
       period: "SAR",
       yearlyPrice: "8200",
       features: [
-        "Custom website design (up to 10 pages)",
-        "Full-stack SaaS platform development",
-        "Cross-platform mobile app development",
-        "Custom eCommerce website setup",
-        "1 year of free maintenance",
-        "Unlimited client changes",
-        "API integration",
-        "Source code sharing",
-        "AI ChatBot",
-        "Design Files Figma",
-        "CMS Content Mangement System",
-        "3-month social media marketing",
-        "Basic SEO",
-        "Monthly performance analytics report",
-        "Branding design",
+        "تصميم موقع مخصص (حتى 10 صفحات)",
+        "تطوير منصة SaaS متكاملة",
+        "تطوير تطبيقات موبايل عبر الأنظمة",
+        "إعداد موقع تجارة إلكترونية مخصص",
+        "سنة كاملة من الصيانة المجانية",
+        "تغييرات غير محدودة من العميل",
+        "تكامل واجهة برمجة التطبيقات (API)",
+        "مشاركة كود المصدر",
+        "روبوت دردشة بالذكاء الاصطناعي",
+        "ملفات التصميم Figma",
+        "نظام إدارة المحتوى (CMS)",
+        "تسويق عبر وسائل التواصل الاجتماعي لمدة 3 أشهر",
+        "تحسين محركات البحث الأساسي (SEO)",
+        "تقرير شهري لتحليلات الأداء",
+        "تصميم العلامة التجارية",
       ],
-      description: "Ideal for growing businesses and teams",
-      buttonText: "Subscribe",
+      description: "مثالية للشركات المتنامية والفرق",
+      buttonText: "اشترك الآن",
       isPopular: true,
     },
     {
-      name: "Premium Package",
+      name: "الباقة المتميزة",
       href: "#",
       price: "12480",
       period: "SAR",
       yearlyPrice: "24000",
       features: [
-        "Custom website design (up to 30 pages)",
-        "Minimum Viable Product development",
-        "mobile app prototype",
-        "NextJs eCommerce website",
-        "3 months of free maintenance",
-        "UnLimited client changes",
-        "API integration & CMS Integration",
-        "Source code sharing",
-        "1-Year social media content creation",
-        "Performance analytics overview",
-        "Advance branding package",
-        "on-page SEO",
-        "42 blog posts or 56 articles",
-        "user testing and feedback collection",
-        "3 design revisions",
-        "Mobile and tablet optimization",
-        "Email marketing template & SMTP Setup",
-        "Creation of social media profiles",
-        "20-Min training session",
-        "Basic security setup & monitoring",
-        "performance optimization",
-        "multilingual site setup",
-        "Creation of custom forms",
+        "تصميم موقع مخصص (حتى 30 صفحة)",
+        "تطوير منتج الحد الأدنى القابل للتطبيق (MVP)",
+        "نموذج أولي لتطبيق الجوال",
+        "موقع تجارة إلكترونية بتقنية Next.js",
+        "3 أشهر من الصيانة المجانية",
+        "تغييرات غير محدودة من العميل",
+        "تكامل واجهة برمجة التطبيقات (API) وتكامل CMS",
+        "مشاركة كود المصدر",
+        "إنشاء محتوى وسائل التواصل الاجتماعي لمدة عام",
+        "نظرة عامة على تحليلات الأداء",
+        "حزمة العلامة التجارية المتقدمة",
+        "تحسين محركات البحث الداخلي (On-Page SEO)",
+        "كتابة 42 منشور مدونة أو 56 مقالًا",
+        "اختبار المستخدم وجمع الملاحظات",
+        "3 مراجعات تصميم",
+        "تحسين الموقع للهواتف المحمولة والأجهزة اللوحية",
+        "إعداد قالب تسويق عبر البريد الإلكتروني وتكوين SMTP",
+        "إنشاء حسابات وسائل التواصل الاجتماعي",
+        "جلسة تدريبية لمدة 20 دقيقة",
+        "إعداد أمني أساسي ومراقبة",
+        "تحسين الأداء",
+        "إعداد موقع متعدد اللغات",
+        "إنشاء نماذج مخصصة",
       ],
-      description: "For large-scale operations and high-volume users",
-      buttonText: "Subscribe",
+      description: "للعمليات واسعة النطاق والمستخدمين ذوي الأحجام الكبيرة",
+      buttonText: "اشترك الآن",
       isPopular: false,
     },
   ],
   faqs: [
     {
-      question: "What services does your agency offer?",
+      question: "ما هي الخدمات التي تقدمها وكالتكم؟",
       answer: (
         <span>
-          Our agency offers a range of services, including website development, SaaS
-          solutions, mobile app development, eCommerce setups, branding design, and
-          digital marketing services. We strive to provide tailored solutions to meet
-          your specific needs.
+          تقدم وكالتنا مجموعة من الخدمات، بما في ذلك تطوير المواقع، حلول SaaS،
+          تطوير تطبيقات الهاتف المحمول، إعدادات التجارة الإلكترونية، تصميم
+          العلامات التجارية، وخدمات التسويق الرقمي. نحن نسعى لتقديم حلول مخصصة
+          لتلبية احتياجاتكم الخاصة.
         </span>
       ),
     },
     {
-      question: "How can I get started with your services?",
+      question: "كيف يمكنني البدء في استخدام خدماتكم؟",
       answer: (
         <span>
-          You can get started by filling out the form on our website with your project
-          details. Once we receive your request, our team will review it and reach out
-          to discuss how we can help you achieve your goals.
+          يمكنك البدء بتعبئة النموذج على موقعنا الإلكتروني مع تفاصيل مشروعك.
+          بمجرد استلامنا لطلبك، سيقوم فريقنا بمراجعته والتواصل معك لمناقشة كيفية
+          مساعدتك في تحقيق أهدافك.
         </span>
       ),
     },
     {
-      question: "What is your pricing structure?",
+      question: "ما هو هيكل التسعير الخاص بكم؟",
       answer: (
         <span>
-          Our pricing structure varies based on the specific services and project
-          requirements. We offer several packages tailored to different needs, and we
-          can provide a detailed quote after discussing your project with us.
+          هيكل التسعير لدينا يختلف بناءً على الخدمات والمتطلبات الخاصة بالمشروع.
+          نحن نقدم عدة باقات مخصصة لاحتياجات مختلفة، ويمكننا تقديم عرض أسعار
+          مفصل بعد مناقشة مشروعك معنا.
         </span>
       ),
     },
     {
-      question: "Do you offer a money-back guarantee?",
+      question: "هل تقدمون ضمان استرجاع الأموال؟",
       answer: (
         <span>
-          Yes, we offer a 30-day money-back guarantee on our services. If you are not
-          satisfied with our work within the first 30 days, you can request a refund.
+          نعم، نحن نقدم ضمان استرجاع الأموال لمدة 30 يومًا على خدماتنا. إذا لم
+          تكن راضيًا عن عملنا خلال الـ 30 يومًا الأولى، يمكنك طلب استرداد
+          المبلغ.
         </span>
       ),
     },
     {
-      question: "Can you handle projects of all sizes?",
+      question: "هل يمكنكم التعامل مع مشاريع بجميع الأحجام؟",
       answer: (
         <span>
-          Absolutely! We work with businesses of all sizes, from startups to large
-          enterprises. Our team is equipped to handle projects ranging from small
-          websites to complex SaaS platforms and mobile applications.
+          بالتأكيد! نحن نعمل مع الشركات من جميع الأحجام، من الشركات الناشئة إلى
+          الشركات الكبرى. فريقنا مجهز للتعامل مع مشاريع تتراوح من المواقع
+          الصغيرة إلى منصات SaaS المعقدة وتطبيقات الهاتف المحمول.
         </span>
       ),
     },
     {
-      question: "How long does it take to complete a project?",
+      question: "كم من الوقت يستغرق إتمام المشروع؟",
       answer: (
         <span>
-          The timeline for completing a project depends on its scope and complexity. We
-          will provide an estimated timeline during our initial discussions and keep you
-          updated throughout the development process.
+          يعتمد الوقت المستغرق لإتمام المشروع على نطاقه وتعقيده. سنقدم تقديرًا
+          للوقت خلال مناقشاتنا الأولية ونوافيك بالتحديثات طوال عملية التطوير.
         </span>
       ),
     },
     {
-      question: "Do you provide ongoing support after project completion?",
+      question: "هل تقدمون دعمًا مستمرًا بعد إتمام المشروع؟",
       answer: (
         <span>
-          Yes, we offer ongoing support and maintenance services to ensure your project
-          runs smoothly after completion. Our support options can be tailored to your
-          needs.
+          نعم، نحن نقدم خدمات الدعم والصيانة المستمرة لضمان سير مشروعك بسلاسة
+          بعد إتمامه. يمكن تخصيص خيارات الدعم لتلبية احتياجاتك.
         </span>
       ),
     },
     {
-      question: "What technologies do you use in your projects?",
+      question: "ما هي التقنيات التي تستخدمها في مشاريعكم؟",
       answer: (
         <span>
-          Our agency uses a variety of technologies depending on the project requirements,
-          including but not limited to React, Node.js, WordPress, Shopify, and various
-          mobile app development frameworks.
+          تستخدم وكالتنا مجموعة من التقنيات بناءً على متطلبات المشروع، بما في
+          ذلك وليس على سبيل الحصر: React، Node.js، WordPress، Shopify، وأطر
+          تطوير تطبيقات الهاتف المحمول المختلفة.
         </span>
       ),
     },
     {
-      question: "Can you help with SEO and digital marketing?",
+      question:
+        "هل يمكنكم مساعدتي في تحسين محركات البحث (SEO) والتسويق الرقمي؟",
       answer: (
         <span>
-          Yes, we provide SEO and digital marketing services as part of our offerings. Our
-          team can help improve your online visibility and drive traffic to your website.
+          نعم، نحن نقدم خدمات تحسين محركات البحث (SEO) والتسويق الرقمي كجزء من
+          عروضنا. يمكن لفريقنا مساعدتك في تحسين ظهورك على الإنترنت وزيادة حركة
+          المرور إلى موقعك الإلكتروني.
         </span>
       ),
     },
   ],
-  footer: [ 
+  footer: [
     {
       title: "Social",
       links: [

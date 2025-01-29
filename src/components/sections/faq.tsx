@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/config";
 
 export default function FAQ() {
   return (
-    <Section title="FAQ" subtitle="Frequently asked questions">
+    <Section title="التعليمات" subtitle="الأسئلة المتداولة">
       <div className="mx-auto my-12 md:max-w-[800px]">
         <Accordion
           type="single"
@@ -31,7 +31,7 @@ export default function FAQ() {
         </Accordion>
       </div>
       <h4 className="mb-12 text-center text-sm font-medium tracking-tight text-foreground/80">
-        Still have questions? Email us at{" "}
+        لا تزال لديك أسئلة؟ راسلنا عبر البريد الإلكتروني على{" "}
         <a href={`mailto:${siteConfig.links.email}`} className="underline">
           {siteConfig.links.email}
         </a>

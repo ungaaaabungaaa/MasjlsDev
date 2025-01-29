@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Web Devlopment",
+    title: "تطوير المواقع",
     description:
-      "Building tailored websites to meet unique business requirements, Ensuring seamless user experiences across all devices & screen sizes",
+      "بناء مواقع مخصصة لتلبية متطلبات الأعمال الفريدة، وضمان تجربة مستخدم سلسة عبر جميع الأجهزة وأحجام الشاشات.",
     className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
     content: (
       <>
@@ -24,9 +24,9 @@ const features = [
     ),
   },
   {
-    title: "App Development",
+    title: "تطوير التطبيقات",
     description:
-      "Creating intuitive apps for iOS and Android to enhance user engagement, Developing applications that perform flawlessly on multiple platforms.",
+      "إنشاء تطبيقات سهلة الاستخدام لـ iOS و Android لتعزيز التفاعل مع المستخدم، وتطوير تطبيقات تعمل بشكل مثالي عبر منصات متعددة.",
     className:
       "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
     content: (
@@ -38,9 +38,9 @@ const features = [
     ),
   },
   {
-    title: "Eccommerce Store",
+    title: "متجر التجارة الإلكترونية",
     description:
-      "Launching fully functional eCommerce websites tailored to your brand.",
+      "إطلاق مواقع التجارة الإلكترونية كاملة الوظائف مصممة خصيصًا لعلامتك التجارية.",
     className:
       "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
     content: (
@@ -64,9 +64,9 @@ const features = [
     ),
   },
   {
-    title: "SASS Applications",
+    title: "تطبيقات SaaS",
     description:
-      "Delivering scalable and secure software solutions for subscription-based models, Connecting services and applications for improved functionality and user experience",
+      "تقديم حلول برمجية قابلة للتوسع وآمنة للنماذج المعتمدة على الاشتراكات، وربط الخدمات والتطبيقات لتحسين الوظائف وتجربة المستخدم.",
     className:
       "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
     content: (
@@ -85,9 +85,9 @@ const features = [
 export default function Component() {
   return (
     <Section
-      title="Approach"
-      subtitle="Empower Your Business with Tailored Development"
-      description="Generic platforms won't meet your needs. Our agency focuses on delivering custom web development services specifically designed to align with your unique business objectives and enhance your online presence."
+      title="يقترب"
+      subtitle="قم بتمكين أعمالك من خلال التطوير المخصص"
+      description="المنصات العامة لن تلبي احتياجاتك. تركز وكالتنا على تقديم خدمات تطوير الويب المخصصة المصممة خصيصًا لتتوافق مع أهداف عملك الفريدة وتعزيز تواجدك عبر الإنترنت."
       className="bg-neutral-100 dark:bg-neutral-900"
     >
       <div className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-gray-500 md:max-w-3xl md:grid-cols-2 xl:grid-rows-2 md:grid-rows-3 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">

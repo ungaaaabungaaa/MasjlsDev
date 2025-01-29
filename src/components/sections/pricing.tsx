@@ -22,15 +22,15 @@ export default function PricingSection() {
   };
 
   return (
-    <Section title="Pricing" subtitle="Select the plan that suits you best.">
+    <Section title="التسعير" subtitle="اختر الخطة التي تناسبك">
       <div className="flex justify-center mb-10">
-        <span className="mr-2 font-semibold">Budget</span>
+        <span className="mr-2 font-semibold">ميزانية</span>
         <label className="relative inline-flex items-center cursor-pointer">
           <Label>
             <Switch checked={!isMonthly} onCheckedChange={handleToggle} />
           </Label>
         </label>
-        <span className="ml-2 font-semibold">Professional</span>
+        <span className="ml-2 font-semibold">احترافي</span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 sm:2 gap-4">
         {siteConfig.pricing.map((plan, index) => (
@@ -78,7 +78,7 @@ export default function PricingSection() {
               <div className="absolute top-0 right-0 bg-primary py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
                 <FaStar className="text-white" />
                 <span className="text-white ml-1 font-sans font-semibold">
-                  Popular
+                  شائع
                 </span>
               </div>
             )}
@@ -112,7 +112,6 @@ export default function PricingSection() {
 
               <hr className="w-full my-4" />
 
-              
               <p className="mt-6 text-xs leading-5 text-muted-foreground">
                 {plan.description}
               </p>

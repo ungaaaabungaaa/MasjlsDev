@@ -5,31 +5,28 @@ import { Brain, Shield, Zap } from "lucide-react";
 
 const problems = [
   {
-    title: "Creative Innovation",
-    description:
-      "Limitless digital possibilities tailored to your vision",
+    title: "الابتكار الإبداعي",
+    description: "إمكانات رقمية غير محدودة مصممة وفقًا لرؤيتك",
     icon: Brain,
   },
   {
-    title: "Rapid Deployment",
+    title: "النشر السريع",
     description:
-      "Tight deadlines? No problem! Our team ensures swift execution.",
+      "هل لديك مواعيد نهائية ضيقة؟ لا مشكلة! فريقنا يضمن التنفيذ السريع.",
     icon: Zap,
   },
   {
-    title: "Confidentiality",
-    description:
-      "Your trust is our priority—what you share remains completely secure with us.",
+    title: "السرية",
+    description: "ثقتك هي أولويتنا - ما تشاركه يبقى آمنًا تمامًا معنا.",
     icon: Shield,
   },
-
 ];
 
 export default function Component() {
   return (
     <Section
-      title="What We Offer!"
-      subtitle="A good design is not only aesthetically pleasing, but also functional. It should be able to solve the problem "
+      title="ما نقدمه!"
+      subtitle="التصميم الجيد ليس فقط من الناحية الجمالية، ولكنه عملي أيضًا. ينبغي أن تكون قادرة على حل المشكلة "
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {problems.map((problem, index) => (
