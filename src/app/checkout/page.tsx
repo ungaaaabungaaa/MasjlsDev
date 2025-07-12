@@ -100,8 +100,8 @@ export default function CheckoutPage() {
         <div className="container mx-auto px-4 py-8">
           <div className="mb-8 flex flex-col items-center justify-center">
             <Icons.palmTreeLogo className="h-12 w-12" />
-            <h1 className="text-3xl font-bold text-center mb-2">One Click CheckOut</h1>
-            <p className="text-muted-foreground text-center">Complete Your Purchase Securely</p>
+            <h1 className="text-3xl font-bold text-center mb-2">OneClick CheckOut</h1>
+            <p className="text-muted-foreground text-center">Fix Your Broken UI</p>
             
           </div>
 
