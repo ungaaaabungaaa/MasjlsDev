@@ -91,9 +91,9 @@ export const siteConfig = {
     {
       name: "Silver Package",
       href: "#",
-      price: "1600",
-      period: "SAR",
-      yearlyPrice: "4000",
+      price: "₹35,200",
+      period: "INR",
+      yearlyPrice: "₹88,000",
       features: [
         "Custom website design (up to 5 pages)",
         "Basic SaaS application setup",
@@ -105,7 +105,8 @@ export const siteConfig = {
         "1-month social media management",
         "Performance Report",
         "Seo Report",
-        "Logo design and branding consultation"
+        "Logo design and branding consultation",
+        "UI Kits"
       ],
       description: "Perfect for individuals and small projects",
       buttonText: "Subscribe",
@@ -114,9 +115,9 @@ export const siteConfig = {
     {
       name: "Golden Package",
       href: "#",
-      price: "4200",
-      period: "SAR",
-      yearlyPrice: "8200",
+      price: "₹92,400",
+      period: "INR",
+      yearlyPrice: "₹180,400",
       features: [
         "Custom website design (up to 10 pages)",
         "Full-stack SaaS platform development",
@@ -133,6 +134,7 @@ export const siteConfig = {
         "Basic SEO",
         "Monthly performance analytics report",
         "Branding design",
+        "UI Kits"
       ],
       description: "Ideal for growing businesses and teams",
       buttonText: "Subscribe",
@@ -141,39 +143,41 @@ export const siteConfig = {
     {
       name: "Premium Package",
       href: "#",
-      price: "12480",
-      period: "SAR",
-      yearlyPrice: "24000",
+      price: "₹274,560",
+      period: "INR",
+      yearlyPrice: "₹528,000",
       features: [
         "Custom website design (up to 30 pages)",
         "Minimum Viable Product development",
-        "mobile app prototype",
+        "Mobile app prototype",
         "NextJs eCommerce website",
         "3 months of free maintenance",
-        "UnLimited client changes",
+        "Unlimited client changes",
         "API integration & CMS Integration",
         "Source code sharing",
         "1-Year social media content creation",
         "Performance analytics overview",
         "Advance branding package",
-        "on-page SEO",
+        "On-page SEO",
         "42 blog posts or 56 articles",
-        "user testing and feedback collection",
+        "User testing and feedback collection",
         "3 design revisions",
         "Mobile and tablet optimization",
         "Email marketing template & SMTP Setup",
         "Creation of social media profiles",
         "20-Min training session",
         "Basic security setup & monitoring",
-        "performance optimization",
-        "multilingual site setup",
+        "Performance optimization",
+        "Multilingual site setup",
         "Creation of custom forms",
+        "UI Kits"
       ],
       description: "For large-scale operations and high-volume users",
       buttonText: "Subscribe",
       isPopular: false,
     },
   ],
+  
   faqs: [
     {
       question: "What services does your agency offer?",
@@ -190,7 +194,7 @@ export const siteConfig = {
       question: "How can I get started with your services?",
       answer: (
         <span>
-          You can get started by filling out the form on our website with your project
+          You can get started by filling out the form on our contact page with your project
           details. Once we receive your request, our team will review it and reach out
           to discuss how we can help you achieve your goals.
         </span>
@@ -210,8 +214,8 @@ export const siteConfig = {
       question: "Do you offer a money-back guarantee?",
       answer: (
         <span>
-          Yes, we offer a 30-day money-back guarantee on our services. If you are not
-          satisfied with our work within the first 30 days, you can request a refund.
+          No, we Dont offer any money-back guarantee on our services. If you are not
+          satisfied with our work we can provide a fee revision.
         </span>
       ),
     },
