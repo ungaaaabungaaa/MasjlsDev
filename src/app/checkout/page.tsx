@@ -62,7 +62,7 @@ export default function CheckoutPage() {
       purchase_units: [
         {
           amount: {
-            value: "172.96",
+            value: "1080.00",
             currency_code: "USD",
           },
           description: "MajlisUI Kit - Complete UI Component Library",
@@ -353,7 +353,7 @@ export default function CheckoutPage() {
                       <span>$1080</span>
                     </div>
                      <p className="text-xs text-center">
-                      Your payment is protected by PayPal's Buyer Protection policy.
+                      Your payment is protected by PayPal&apos;s Buyer Protection policy.
                     </p>
                   </div>
                 </CardContent>
