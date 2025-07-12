@@ -91,7 +91,7 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">11. Changes to This Policy</h2>
           <p>
-            We may update this Privacy Policy from time to time. The revised policy will be posted on this page with an updated "Last Updated" date. Continued use of our services constitutes acceptance of the updated terms.
+            We may update this Privacy Policy from time to time. The revised policy will be posted on this page with an updated &quot;Last Updated&quot; date. Continued use of our services constitutes acceptance of the updated terms.
           </p>
 
           <h2 className="text-xl font-semibold">12. Contact Us</h2>

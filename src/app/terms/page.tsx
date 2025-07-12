@@ -12,7 +12,7 @@ export default function Component() {
         <h1 className="text-4xl font-bold mb-6 text-center">Terms of Service</h1>
         <div className="space-y-6 text-sm md:text-base text-gray-700 dark:text-gray-300">
           <p className="text-center">
-            Welcome to MajlisDev. These Terms of Service ("Terms") govern your access to and use of our website, platform, and any associated services (collectively, the "Service"). By accessing or using our Service, you agree to be bound by these Terms.
+            Welcome to MajlisDev. These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website, platform, and any associated services (collectively, the &quot;Service&quot;). By accessing or using our Service, you agree to be bound by these Terms.
           </p>
 
           <h2 className="text-xl font-semibold">1. Services Provided</h2>
@@ -83,7 +83,7 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">13. Disclaimer of Warranties</h2>
           <p>
-            Our services are provided "as is" and "as available." We disclaim all warranties, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
+            Our services are provided &quot;as is&quot; and &quot;as available.&quot; We disclaim all warranties, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
           </p>
 
           <h2 className="text-xl font-semibold">14. Limitation of Liability</h2>
@@ -103,7 +103,7 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">17. Governing Law</h2>
           <p>
-            These Terms are governed by and construed in accordance with the laws of [Insert Jurisdiction, e.g., "the Republic of India"], without regard to conflict of law principles.
+            These Terms are governed by and construed in accordance with the laws of [Insert Jurisdiction, e.g., &quot;the Republic of India&quot;], without regard to conflict of law principles.
           </p>
 
           <h2 className="text-xl font-semibold">18. Contact Us</h2>
