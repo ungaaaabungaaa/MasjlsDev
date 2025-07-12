@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 export default function CheckoutPage() {
   const [couponCode, setCouponCode] = useState("");
@@ -21,6 +22,8 @@ export default function CheckoutPage() {
     country: "",
     phone: "",
   });
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -37,9 +40,57 @@ export default function CheckoutPage() {
   };
 
   const handleCheckout = () => {
-    // Handle PayPal checkout logic here
-    console.log("Billing info:", billingInfo);
-    console.log("Proceeding to PayPal checkout...");
+    // Validate billing information
+    if (!billingInfo.email || !billingInfo.firstName || !billingInfo.lastName) {
+      alert("Please fill in all required billing information.");
+      return;
+    }
+
+    // Trigger the hidden PayPal button
+    const paypalButton = document.querySelector('[data-paypal-button]') as HTMLElement;
+    if (paypalButton) {
+      paypalButton.click();
+    } else {
+      console.log("Billing info:", billingInfo);
+      console.log("Proceeding to PayPal checkout...");
+    }
+  };
+
+  // PayPal order creation
+  const createOrder = (data: any, actions: any) => {
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: "172.96",
+            currency_code: "USD",
+          },
+          description: "MajlisUI Kit - Complete UI Component Library",
+        },
+      ],
+    });
+  };
+
+  // PayPal payment approval
+  const onApprove = async (data: any, actions: any) => {
+    setIsProcessing(true);
+    try {
+      const details = await actions.order.capture();
+      console.log("Payment successful:", details);
+      setPaymentSuccess(true);
+      alert("Payment completed successfully!");
+    } catch (error) {
+      console.error("Payment error:", error);
+      alert("Payment failed. Please try again.");
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  // PayPal error handling
+  const onError = (err: any) => {
+    console.error("PayPal error:", err);
+    alert("An error occurred with PayPal. Please try again.");
   };
 
   return (
@@ -51,7 +102,7 @@ export default function CheckoutPage() {
           <div className="mb-8 flex flex-col items-center justify-center">
             <Icons.palmTreeLogo className="h-12 w-12" />
             <h1 className="text-3xl font-bold text-center mb-2">One Click CheckOut</h1>
-            <p className="text-muted-foreground text-center">Fix Your Broken UI</p>
+            <p className="text-muted-foreground text-center">Complete Your Purchase Securely</p>
             
           </div>
 
@@ -181,13 +232,54 @@ export default function CheckoutPage() {
                 </CardContent>
               </Card>
 
-              <Button 
-                onClick={handleCheckout}
-                className="w-full h-12 text-lg font-semibold"
-                size="lg"
-              >
-                Continue to PayPal
-              </Button>
+              {isProcessing && (
+                <div className="flex items-center justify-center py-4">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                  <span className="ml-2 text-sm text-muted-foreground">Processing payment...</span>
+                </div>
+              )}
+
+              {paymentSuccess && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">✓</span>
+                    </div>
+                    <span className="text-green-700 font-medium">Payment Successful!</span>
+                  </div>
+                </div>
+              )}
+
+              {!paymentSuccess && (
+                <>
+                  <Button 
+                    onClick={handleCheckout}
+                    className="w-full h-12 text-lg font-semibold"
+                    size="lg"
+                    disabled={isProcessing}
+                  >
+                    Continue to PayPal
+                  </Button>
+                  
+                  {/* Hidden PayPal button for programmatic triggering */}
+                  <div className="hidden">
+                    <PayPalScriptProvider
+                      options={{
+                        clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test",
+                        currency: "USD",
+                        intent: "capture",
+                      }}
+                    >
+                      <PayPalButtons
+                        createOrder={createOrder}
+                        onApprove={onApprove}
+                        onError={onError}
+                        data-paypal-button
+                      />
+                    </PayPalScriptProvider>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Right Column - Order Summary */}
@@ -204,7 +296,10 @@ export default function CheckoutPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold">MajlisUI Kit</h3>
-                        <p className="text-sm text-muted-foreground">Complete UI Component Library</p>
+                        <p className="text-sm text-muted-foreground">Complete UI Component Library <br></br> 100+ Tailored UI Components <br></br> Optimized for Modern Web Apps  <br></br> Built with Accessibility in Mind <br></br>Fully Responsive & Mobile-Ready <br></br> Easy Integration with React/Next.js <br></br> Lifetime Access & Updates <br></br> Commercial Use License Included <br></br> Clean, Scalable Codebase  </p>
+                        
+                       
+          
                       </div>
                     </div>
                     <div className="text-right">
@@ -241,27 +336,29 @@ export default function CheckoutPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span>$159.96</span>
+                      <span>$1,200.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Delivery</span>
+                      <span>Additional Charges</span>
                       <span>$0.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Tax</span>
-                      <span>$23.99</span>
+                      <span>Tax (0%)</span>
+                      <span>$0.00</span>
                     </div>
                     <div className="flex justify-between text-green-600">
                       <span>Discount</span>
-                      <span>-$10.99</span>
+                      <span>-$120.00</span>
                     </div>
                     <hr className="my-3" />
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total</span>
-                      <span>$172.96</span>
+                      <span>$1080</span>
                     </div>
+                     <p className="text-xs text-center">
+                      Your payment is protected by PayPal's Buyer Protection policy.
+                    </p>
                   </div>
-
                 </CardContent>
               </Card>
             </div>
