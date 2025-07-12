@@ -106,7 +106,7 @@ function HeroCTA() {
           href="/checkout"
           className={cn(
             buttonVariants({ variant: "default" }),
-            "w-full sm:w-auto text-background flex gap-2"
+            "w-full sm:w-auto text-white flex gap-2"
           )}
         >
           <Icons.palmTreeLogo className="h-6 w-6" />

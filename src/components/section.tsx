@@ -32,7 +32,7 @@ export default function Section({
               </h3>
             )}
             {description && (
-              <p className="mt-6 text-lg leading-8 text-slate-600 max-w-2xl mx-auto">
+              <p className="mt-6 text-lg leading-8 max-w-2xl mx-auto text-muted-foreground">
                 {description}
               </p>
             )}
