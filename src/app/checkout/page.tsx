@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+
+// Razorpay types
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
 
 export default function CheckoutPage() {
   const [couponCode, setCouponCode] = useState("");
@@ -38,58 +44,90 @@ export default function CheckoutPage() {
     console.log("Coupon code:", couponCode);
   };
 
-  const handleCheckout = () => {
+  const handleRazorpayPayment = async () => {
     // Validate billing information
     if (!billingInfo.email || !billingInfo.firstName || !billingInfo.lastName) {
       alert("Please fill in all required billing information.");
       return;
     }
 
-    // Trigger the hidden PayPal button
-    const paypalButton = document.querySelector('[data-paypal-button]') as HTMLElement;
-    if (paypalButton) {
-      paypalButton.click();
-    } else {
-      console.log("Billing info:", billingInfo);
-      console.log("Proceeding to PayPal checkout...");
-    }
-  };
-
-  // PayPal order creation
-  const createOrder = (data: any, actions: any) => {
-    return actions.order.create({
-      purchase_units: [
-        {
-          amount: {
-            value: "1080.00",
-            currency_code: "USD",
-          },
-          description: "MajlisUI Kit - Complete UI Component Library",
-        },
-      ],
-    });
-  };
-
-  // PayPal payment approval
-  const onApprove = async (data: any, actions: any) => {
     setIsProcessing(true);
-    try {
-      const details = await actions.order.capture();
-      console.log("Payment successful:", details);
-      setPaymentSuccess(true);
-      alert("Payment completed successfully!");
-    } catch (error) {
-      console.error("Payment error:", error);
-      alert("Payment failed. Please try again.");
-    } finally {
-      setIsProcessing(false);
-    }
-  };
 
-  // PayPal error handling
-  const onError = (err: any) => {
-    console.error("PayPal error:", err);
-    alert("An error occurred with PayPal. Please try again.");
+    try {
+      // Create order on your backend
+      const orderResponse = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: 108000, // amount in paise (₹1,080)
+          currency: 'INR',
+          receipt: `receipt_${Date.now()}`,
+          notes: {
+            email: billingInfo.email,
+            name: `${billingInfo.firstName} ${billingInfo.lastName}`,
+            phone: billingInfo.phone,
+          },
+        }),
+      });
+
+      if (!orderResponse.ok) {
+        throw new Error('Failed to create order');
+      }
+
+      const orderData = await orderResponse.json();
+
+      // Razorpay options
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: "MajlisUI Kit",
+        description: "Complete UI Component Library",
+        order_id: orderData.id,
+        prefill: {
+          name: `${billingInfo.firstName} ${billingInfo.lastName}`,
+          email: billingInfo.email,
+          contact: billingInfo.phone,
+        },
+        notes: {
+          address: billingInfo.address,
+          city: billingInfo.city,
+          state: billingInfo.state,
+          country: billingInfo.country,
+        },
+        theme: {
+          color: "#3B82F6",
+        },
+        handler: function (response: any) {
+          // Payment successful
+          console.log("Payment successful:", response);
+          setPaymentSuccess(true);
+          setIsProcessing(false);
+          alert("Payment completed successfully!");
+        },
+        modal: {
+          ondismiss: function () {
+            setIsProcessing(false);
+            console.log("Payment cancelled");
+          },
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.on('payment.failed', function (response: any) {
+        console.error("Payment failed:", response);
+        setIsProcessing(false);
+        alert("Payment failed. Please try again.");
+      });
+
+      rzp.open();
+    } catch (error) {
+      console.error("Error creating order:", error);
+      setIsProcessing(false);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -172,7 +210,7 @@ export default function CheckoutPage() {
                       <Input
                         id="city"
                         name="city"
-                        placeholder="New York"
+                        placeholder="Mumbai"
                         value={billingInfo.city}
                         onChange={handleInputChange}
                         required
@@ -183,7 +221,7 @@ export default function CheckoutPage() {
                       <Input
                         id="state"
                         name="state"
-                        placeholder="NY"
+                        placeholder="Maharashtra"
                         value={billingInfo.state}
                         onChange={handleInputChange}
                         required
@@ -197,7 +235,7 @@ export default function CheckoutPage() {
                       <Input
                         id="zipCode"
                         name="zipCode"
-                        placeholder="10001"
+                        placeholder="400001"
                         value={billingInfo.zipCode}
                         onChange={handleInputChange}
                         required
@@ -208,7 +246,7 @@ export default function CheckoutPage() {
                       <Input
                         id="country"
                         name="country"
-                        placeholder="United States"
+                        placeholder="India"
                         value={billingInfo.country}
                         onChange={handleInputChange}
                         required
@@ -222,42 +260,23 @@ export default function CheckoutPage() {
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 9876543210"
                       value={billingInfo.phone}
                       onChange={handleInputChange}
                       required
                     />
                   </div>
-                  {!paymentSuccess && (
-                <>
-                  <Button 
-                    onClick={handleCheckout}
-                    className="w-full h-12 text-lg text-white font-semibold"
-                    size="lg"
-                    disabled={isProcessing}
-                  >
-                    Pay with PayPal
-                  </Button>
                   
-                  {/* Hidden PayPal button for programmatic triggering */}
-                  <div className="hidden">
-                    <PayPalScriptProvider
-                      options={{
-                        clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test",
-                        currency: "USD",
-                        intent: "capture",
-                      }}
+                  {!paymentSuccess && (
+                    <Button 
+                      onClick={handleRazorpayPayment}
+                      className="w-full h-12 text-lg text-white font-semibold"
+                      size="lg"
+                      disabled={isProcessing}
                     >
-                      <PayPalButtons
-                        createOrder={createOrder}
-                        onApprove={onApprove}
-                        onError={onError}
-                        data-paypal-button
-                      />
-                    </PayPalScriptProvider>
-                  </div>
-                </>
-              )}
+                      {isProcessing ? "Processing..." : "Pay with Razorpay"}
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
 
@@ -278,13 +297,11 @@ export default function CheckoutPage() {
                   </div>
                 </div>
               )}
-
-             
             </div>
 
             {/* Right Column - Order Summary */}
             <div className="space-y-6">
-              <Card className="border-none">
+              <Card className="border-none shadow-none">
                 <CardHeader>
                   <CardTitle>Your Order</CardTitle>
                 </CardHeader>
@@ -300,7 +317,7 @@ export default function CheckoutPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold">$1,080.00</p>
+                      <p className="font-semibold">₹1,080.00</p>
                     </div>
                   </div>
                 </CardContent>
@@ -331,27 +348,27 @@ export default function CheckoutPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span>$1,200.00</span>
+                      <span>₹1,200.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Additional Charges</span>
-                      <span>$0.00</span>
+                      <span>₹0.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Tax (0%)</span>
-                      <span>$0.00</span>
+                      <span>₹0.00</span>
                     </div>
                     <div className="flex justify-between ">
                       <span>Discount</span>
-                      <span>-$120.00</span>
+                      <span>-₹120.00</span>
                     </div>
                     <hr className="my-3" />
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total</span>
-                      <span>$1080</span>
+                      <span>₹1,080</span>
                     </div>
                      <p className="text-xs text-center">
-                      Your payment is protected by PayPal&apos;s Buyer Protection policy.
+                      Your payment is secured by Razorpay&apos;s advanced encryption and security protocols.
                     </p>
                   </div>
                 </CardContent>

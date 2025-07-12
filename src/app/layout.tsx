@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import { HeroUIProvider } from "@heroui/react";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({});
@@ -32,6 +33,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="MajlisDev" />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script
+          src="https://checkout.razorpay.com/v1/checkout.js"
+          strategy="beforeInteractive"
+        />
       </head>
       <body
         className={cn(
