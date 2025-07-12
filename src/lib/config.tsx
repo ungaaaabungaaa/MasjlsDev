@@ -86,10 +86,6 @@ export const siteConfig = {
         ],
       },
     },
-    {
-      href: "/blog",
-      label: "Projects",
-    },
   ],
   pricing: [
     {

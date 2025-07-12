@@ -4,7 +4,6 @@ import Drawer from "@/components/drawer";
 import { Icons } from "@/components/icons";
 import Menu from "@/components/menu";
 import { buttonVariants } from "@/components/ui/button";
-
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -54,14 +53,14 @@ export default function Header() {
             <div className="gap-2 flex">
               
               <Link
-                href="/signup"
+                href="/"
                 className={cn(
                   buttonVariants({ variant: "default" }),
-                  "w-full sm:w-auto text-background flex gap-2"
+                  "w-full sm:w-auto text-white flex gap-2"
                 )}
               >
-                <Icons.palmTreeLogo className="h-6 w-6" />
-                Contact Us
+                <Icons.palmTreeLogo className="h-6 w-6 text-white" />
+                  Buy Now
               </Link>
             </div>
           </div>
