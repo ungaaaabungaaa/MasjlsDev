@@ -53,7 +53,7 @@ export default function Header() {
             <div className="gap-2 flex">
               
               <Link
-                href="/"
+                href="/checkout"
                 className={cn(
                   buttonVariants({ variant: "default" }),
                   "w-full sm:w-auto text-white flex gap-2"
