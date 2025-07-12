@@ -110,7 +110,7 @@ function HeroCTA() {
           )}
         >
           <Icons.palmTreeLogo className="h-6 w-6" />
-         Contact Us
+          Get Started Now
         </Link>
       </motion.div>
       <motion.p

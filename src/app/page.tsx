@@ -24,10 +24,10 @@ export default function Home() {
       <HowItWorks />
       {/* <TestimonialsCarousel /> */}
       <Features />
-      {/* <Testimonials />  */}
+      <Testimonials /> 
       <Pricing />
       <FAQ />
-      <Blog />
+      {/* <Blog /> */}
       <CTA />
       <Footer />
     </main>
