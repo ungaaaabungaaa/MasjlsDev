@@ -297,9 +297,6 @@ export default function CheckoutPage() {
                       <div>
                         <h3 className="font-semibold">MajlisUI Kit</h3>
                         <p className="text-sm text-muted-foreground">Complete UI Component Library <br></br> 100+ Tailored UI Components <br></br> Optimized for Modern Web Apps  <br></br> Built with Accessibility in Mind <br></br>Fully Responsive & Mobile-Ready <br></br> Easy Integration with React/Next.js <br></br> Lifetime Access & Updates <br></br> Commercial Use License Included <br></br> Clean, Scalable Codebase  </p>
-                        
-                       
-          
                       </div>
                     </div>
                     <div className="text-right">
