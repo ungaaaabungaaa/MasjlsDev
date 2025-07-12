@@ -61,7 +61,7 @@ export default function CheckoutPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: 108000, // amount in paise (₹1,080)
+          amount: 9600000, // amount in paise (₹96,000)
           currency: 'INR',
           receipt: `receipt_${Date.now()}`,
           notes: {
@@ -317,7 +317,7 @@ export default function CheckoutPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold">₹1,080.00</p>
+                      <p className="font-semibold">₹96,000.00</p>
                     </div>
                   </div>
                 </CardContent>
@@ -348,24 +348,24 @@ export default function CheckoutPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span>₹1,200.00</span>
+                      <span>₹92,200.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Additional Charges</span>
-                      <span>₹0.00</span>
+                      <span>Additional Charges 3%</span>
+                      <span>₹2,766.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Tax (0%)</span>
-                      <span>₹0.00</span>
+                      <span>Tax (18%)</span>
+                      <span>₹16,596.00</span>
                     </div>
                     <div className="flex justify-between ">
                       <span>Discount</span>
-                      <span>-₹120.00</span>
+                      <span>-₹15,562.00</span>
                     </div>
                     <hr className="my-3" />
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total</span>
-                      <span>₹1,080</span>
+                      <span>₹96,000.00</span>
                     </div>
                      <p className="text-xs text-center">
                       Your payment is secured by Razorpay&apos;s advanced encryption and security protocols.
