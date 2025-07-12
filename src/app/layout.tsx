@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
+import { HeroUIProvider } from "@heroui/react";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({});
@@ -42,9 +43,11 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
-          <ThemeToggle />
-          <TailwindIndicator />
+          <HeroUIProvider>
+            {children}
+            <ThemeToggle />
+            <TailwindIndicator />
+          </HeroUIProvider>
         </ThemeProvider>
       </body>
     </html>
