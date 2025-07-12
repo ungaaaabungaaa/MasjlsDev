@@ -19,7 +19,7 @@ export default function Component() {
 
           <h2 className="text-lg font-semibold">1. Digital Product Nature</h2>
           <p>
-            The <strong>MajlisUI Kit</strong> is a downloadable digital product. Once access is granted and the files are delivered, the product is considered "used" and cannot be returned.
+            The <strong>MajlisUI Kit</strong> is a downloadable digital product. Once access is granted and the files are delivered, the product is considered &quot;used&quot; and cannot be returned.
           </p>
 
           <h2 className="text-lg font-semibold">2. No Cancellations</h2>
