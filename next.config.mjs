@@ -2,12 +2,30 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      { hostname: "localhost" },
-      { hostname: "randomuser.me" },
-      { hostname: "upload.wikimedia.org" },
-      { hostname: "avatars.githubusercontent.com" },
-      { hostname: "vitejs.dev" },
-      { hostname: "www.gstatic.com" }
+      { 
+        protocol: "http",
+        hostname: "localhost" 
+      },
+      { 
+        protocol: "https",
+        hostname: "randomuser.me" 
+      },
+      { 
+        protocol: "https",
+        hostname: "upload.wikimedia.org" 
+      },
+      { 
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com" 
+      },
+      { 
+        protocol: "https",
+        hostname: "vitejs.dev" 
+      },
+      { 
+        protocol: "https",
+        hostname: "www.gstatic.com" 
+      }
     ],
   },
 };
