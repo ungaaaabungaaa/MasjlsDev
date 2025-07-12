@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
-import Link from "next/link";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 export default function CheckoutPage() {
@@ -106,10 +105,10 @@ export default function CheckoutPage() {
             
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto shadow-none border-none">
             {/* Left Column - Billing Form */}
             <div className="space-y-6">
-              <Card className="border-none">
+              <Card className="border-none shadow-none">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icons.palmTreeLogo className="h-5 w-5" />
@@ -229,36 +228,15 @@ export default function CheckoutPage() {
                       required
                     />
                   </div>
-                </CardContent>
-              </Card>
-
-              {isProcessing && (
-                <div className="flex items-center justify-center py-4">
-                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
-                  <span className="ml-2 text-sm text-muted-foreground">Processing payment...</span>
-                </div>
-              )}
-
-              {paymentSuccess && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm">✓</span>
-                    </div>
-                    <span className="text-green-700 font-medium">Payment Successful!</span>
-                  </div>
-                </div>
-              )}
-
-              {!paymentSuccess && (
+                  {!paymentSuccess && (
                 <>
                   <Button 
                     onClick={handleCheckout}
-                    className="w-full h-12 text-lg font-semibold"
+                    className="w-full h-12 text-lg text-white font-semibold"
                     size="lg"
                     disabled={isProcessing}
                   >
-                    Continue to PayPal
+                    Pay with PayPal
                   </Button>
                   
                   {/* Hidden PayPal button for programmatic triggering */}
@@ -280,6 +258,28 @@ export default function CheckoutPage() {
                   </div>
                 </>
               )}
+                </CardContent>
+              </Card>
+
+              {isProcessing && (
+                <div className="flex items-center justify-center py-4">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                  <span className="ml-2 text-sm text-muted-foreground">Processing payment...</span>
+                </div>
+              )}
+
+              {paymentSuccess && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm">✓</span>
+                    </div>
+                    <span className="text-green-700 font-medium">Payment Successful!</span>
+                  </div>
+                </div>
+              )}
+
+             
             </div>
 
             {/* Right Column - Order Summary */}
@@ -306,11 +306,9 @@ export default function CheckoutPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-none">
-                <CardHeader>
-                  <CardTitle className="text-lg">Coupon Code</CardTitle>
-                </CardHeader>
+              <Card className="border-none shadow-none">
                 <CardContent>
+                <CardTitle className="text-lg mb-4">Coupon Code</CardTitle>
                   <form onSubmit={handleCouponSubmit} className="space-y-3">
                     <div className="flex gap-2">
                       <Input
@@ -343,7 +341,7 @@ export default function CheckoutPage() {
                       <span>Tax (0%)</span>
                       <span>$0.00</span>
                     </div>
-                    <div className="flex justify-between text-green-600">
+                    <div className="flex justify-between ">
                       <span>Discount</span>
                       <span>-$120.00</span>
                     </div>
