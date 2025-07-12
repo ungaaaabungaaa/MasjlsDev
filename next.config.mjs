@@ -8,7 +8,12 @@ const nextConfig = {
       },
       { 
         protocol: "https",
-        hostname: "randomuser.me" 
+        hostname: "randomuser.me",
+        pathname: "/api/portraits/**"
+      },
+      { 
+        protocol: "https",
+        hostname: "images.unsplash.com"
       },
       { 
         protocol: "https",
@@ -27,6 +32,11 @@ const nextConfig = {
         hostname: "www.gstatic.com" 
       }
     ],
+    // Add these additional options for better compatibility
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 

@@ -69,9 +69,13 @@ export const TestimonialCard = ({
       <Image
         width={40}
         height={40}
-        src={img || ""}
+        src={img || "/author.jpg"}
         alt={name}
         className="h-10 w-10 rounded-full ring-1 ring-border ring-offset-4"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = "/author.jpg";
+        }}
       />
 
       <div>
@@ -86,7 +90,7 @@ const testimonials = [
   {
     name: "Alex Rivera",
     role: "CTO at InnovateTech",
-    img: "https://randomuser.me/api/portraits/men/91.jpg",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The AI-driven analytics from #QuantumInsights have revolutionized our
@@ -101,7 +105,7 @@ const testimonials = [
   {
     name: "Samantha Lee",
     role: "Marketing Director at NextGen Solutions",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Implementing #AIStream&apos;s customer prediction model has drastically
@@ -114,7 +118,7 @@ const testimonials = [
   {
     name: "Raj Patel",
     role: "Founder & CEO at StartUp Grid",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         As a startup, we need to move fast and stay ahead. #CodeAI&apos;s
@@ -127,7 +131,7 @@ const testimonials = [
   {
     name: "Emily Chen",
     role: "Product Manager at Digital Wave",
-    img: "https://randomuser.me/api/portraits/women/83.jpg",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #VoiceGen&apos;s AI-driven voice synthesis has made creating global
@@ -140,7 +144,7 @@ const testimonials = [
   {
     name: "Michael Brown",
     role: "Data Scientist at FinTech Innovations",
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Leveraging #DataCrunch&apos;s AI for our financial models has given us
@@ -155,7 +159,7 @@ const testimonials = [
   {
     name: "Linda Wu",
     role: "VP of Operations at LogiChain Solutions",
-    img: "https://randomuser.me/api/portraits/women/5.jpg",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #LogiTech&apos;s supply chain optimization tools have drastically
@@ -169,7 +173,7 @@ const testimonials = [
   {
     name: "Carlos Gomez",
     role: "Head of R&D at EcoInnovate",
-    img: "https://randomuser.me/api/portraits/men/14.jpg",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         By integrating #GreenTech&apos;s sustainable energy solutions,
@@ -184,7 +188,7 @@ const testimonials = [
   {
     name: "Aisha Khan",
     role: "Chief Marketing Officer at Fashion Forward",
-    img: "https://randomuser.me/api/portraits/women/56.jpg",
+    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #TrendSetter&apos;s market analysis AI has transformed how we approach
@@ -199,7 +203,7 @@ const testimonials = [
   {
     name: "Tom Chen",
     role: "Director of IT at HealthTech Solutions",
-    img: "https://randomuser.me/api/portraits/men/18.jpg",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Implementing #MediCareAI in our patient care systems has improved
@@ -214,7 +218,7 @@ const testimonials = [
   {
     name: "Sofia Patel",
     role: "CEO at EduTech Innovations",
-    img: "https://randomuser.me/api/portraits/women/73.jpg",
+    img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #LearnSmart&apos;s AI-driven personalized learning plans have doubled
@@ -229,7 +233,7 @@ const testimonials = [
   {
     name: "Jake Morrison",
     role: "CTO at SecureNet Tech",
-    img: "https://randomuser.me/api/portraits/men/25.jpg",
+    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         With #CyberShield&apos;s AI-powered security systems, our data
@@ -242,7 +246,7 @@ const testimonials = [
   {
     name: "Nadia Ali",
     role: "Product Manager at Creative Solutions",
-    img: "https://randomuser.me/api/portraits/women/78.jpg",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #DesignPro&apos;s AI has streamlined our creative process, enhancing
@@ -255,7 +259,7 @@ const testimonials = [
   {
     name: "Omar Farooq",
     role: "Founder at Startup Hub",
-    img: "https://randomuser.me/api/portraits/men/54.jpg",
+    img: "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         #VentureAI&apos;s insights into startup ecosystems have been invaluable
