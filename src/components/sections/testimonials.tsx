@@ -90,6 +90,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "CEO at CloudTech Solutions",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b79ff93c?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev built our SaaS platform with exceptional multi-tenant architecture.
@@ -103,6 +104,7 @@ const testimonials = [
   {
     name: "Michael Chen",
     role: "CTO at DataFlow Systems",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development team delivered exactly what we needed.
@@ -114,6 +116,7 @@ const testimonials = [
   {
     name: "Lisa Rodriguez",
     role: "Founder at StartupLaunch",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         As a startup, we needed a robust SaaS platform quickly.
@@ -125,6 +128,7 @@ const testimonials = [
   {
     name: "David Kim",
     role: "Product Manager at ScaleUp Inc",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The cloud-native SaaS platform has transformed our business operations.
@@ -136,6 +140,7 @@ const testimonials = [
   {
     name: "Jennifer Wang",
     role: "VP of Engineering at TechFlow",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev&apos;s SaaS development expertise is unmatched.
@@ -147,6 +152,7 @@ const testimonials = [
   {
     name: "Robert Taylor",
     role: "Director at InnovateLabs",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development process was smooth and professional.
@@ -158,6 +164,7 @@ const testimonials = [
   {
     name: "Amanda Foster",
     role: "CEO at CloudBridge",
+    img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Working with MajlisDev on our SaaS platform was exceptional.
@@ -169,6 +176,7 @@ const testimonials = [
   {
     name: "Thomas Anderson",
     role: "CTO at NextGen SaaS",
+    img: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Our custom SaaS platform development exceeded all expectations.
@@ -180,6 +188,7 @@ const testimonials = [
   {
     name: "Maria Garcia",
     role: "Product Owner at SoftwareLab",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development team understood our complex requirements.
@@ -191,6 +200,7 @@ const testimonials = [
   {
     name: "James Wilson",
     role: "VP of Technology at CloudScale",
+    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev built our enterprise SaaS platform with precision.
@@ -202,6 +212,7 @@ const testimonials = [
   {
     name: "Karen Davis",
     role: "Founder at TechStartup",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Our SaaS platform launch was a huge success thanks to MajlisDev.
@@ -213,6 +224,7 @@ const testimonials = [
   {
     name: "Brian Miller",
     role: "Engineering Lead at PlatformPro",
+    img: "https://images.unsplash.com/photo-1513690277738-c9bc462d12c2?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform architecture is robust and well-designed.
