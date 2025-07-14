@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
+import { useRouter } from "next/navigation";
 
 // Razorpay types
 declare global {
@@ -15,6 +16,7 @@ declare global {
 }
 
 export default function CheckoutPage() {
+  const router = useRouter();
   const [couponCode, setCouponCode] = useState("");
   const [billingInfo, setBillingInfo] = useState({
     email: "",
@@ -106,7 +108,17 @@ export default function CheckoutPage() {
           console.log("Payment successful:", response);
           setPaymentSuccess(true);
           setIsProcessing(false);
-          alert("Payment completed successfully!");
+          
+          // Navigate to thank you page with payment details
+          const searchParams = new URLSearchParams({
+            name: `${billingInfo.firstName} ${billingInfo.lastName}`,
+            email: billingInfo.email,
+            orderId: response.razorpay_order_id,
+            paymentId: response.razorpay_payment_id,
+            amount: "96,000.00"
+          });
+          
+          router.push(`/thank?${searchParams.toString()}`);
         },
         modal: {
           ondismiss: function () {
