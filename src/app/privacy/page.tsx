@@ -43,7 +43,7 @@ export default function Component() {
           </p>
           <ul className="list-disc pl-6">
             <li>Trusted third-party service providers who assist in delivering our services</li>
-            <li>Payment processors (e.g., Razorpay, Stripe, PayPal)</li>
+            <li>Payment processors Razorpay</li>
             <li>Government authorities or law enforcement if legally required</li>
             <li>In connection with a business transaction such as a merger or acquisition</li>
           </ul>
@@ -100,7 +100,6 @@ export default function Component() {
           </p>
           <p>
             <strong>Email:</strong> <a href="mailto:support@majlisdev.com">support@majlisdev.com</a><br />
-            <strong>Address:</strong> MajlisDev HQ, [Insert Company Address Here]
           </p>
         </div>
       </div>

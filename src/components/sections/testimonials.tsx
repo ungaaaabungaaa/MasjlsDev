@@ -88,184 +88,148 @@ export const TestimonialCard = ({
 
 const testimonials = [
   {
-    name: "Alex Rivera",
-    role: "CTO at InnovateTech",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    description: (
-      <p>
-        The AI-driven analytics from #QuantumInsights have revolutionized our
-        product development cycle.
-        <Highlight>
-          Insights are now more accurate and faster than ever.
-        </Highlight>{" "}
-        A game-changer for tech companies.
-      </p>
-    ),
-  },
-  {
-    name: "Samantha Lee",
-    role: "Marketing Director at NextGen Solutions",
+    name: "Sarah Johnson",
+    role: "CEO at CloudTech Solutions",
     img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        Implementing #AIStream&apos;s customer prediction model has drastically
-        improved our targeting strategy.
-        <Highlight>Seeing a 50% increase in conversion rates!</Highlight> Highly
-        recommend their solutions.
+        MajlisDev built our SaaS platform with exceptional multi-tenant architecture.
+        <Highlight>
+          Our platform now serves 10,000+ users seamlessly.
+        </Highlight>{" "}
+        The scalability and performance are outstanding.
       </p>
     ),
   },
   {
-    name: "Raj Patel",
-    role: "Founder & CEO at StartUp Grid",
+    name: "Michael Chen",
+    role: "CTO at DataFlow Systems",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        As a startup, we need to move fast and stay ahead. #CodeAI&apos;s
-        automated coding assistant helps us do just that.
-        <Highlight>Our development speed has doubled.</Highlight> Essential tool
-        for any startup.
+        The SaaS platform development team delivered exactly what we needed.
+        <Highlight>API integrations were flawless and deployment was smooth.</Highlight>
+        Our subscription management works perfectly.
       </p>
     ),
   },
   {
-    name: "Emily Chen",
-    role: "Product Manager at Digital Wave",
+    name: "Lisa Rodriguez",
+    role: "Founder at StartupLaunch",
     img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #VoiceGen&apos;s AI-driven voice synthesis has made creating global
-        products a breeze.
-        <Highlight>Localization is now seamless and efficient.</Highlight> A
-        must-have for global product teams.
+        As a startup, we needed a robust SaaS platform quickly.
+        <Highlight>MajlisDev delivered in record time with enterprise-grade features.</Highlight>
+        Our users love the dashboard and analytics.
       </p>
     ),
   },
   {
-    name: "Michael Brown",
-    role: "Data Scientist at FinTech Innovations",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    name: "David Kim",
+    role: "Product Manager at ScaleUp Inc",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        Leveraging #DataCrunch&apos;s AI for our financial models has given us
-        an edge in predictive accuracy.
-        <Highlight>
-          Our investment strategies are now powered by real-time data analytics.
-        </Highlight>{" "}
-        Transformative for the finance industry.
+        The cloud-native SaaS platform has transformed our business operations.
+        <Highlight>Auto-scaling and security features are top-notch.</Highlight>
+        We couldn't be happier with the results.
       </p>
     ),
   },
   {
-    name: "Linda Wu",
-    role: "VP of Operations at LogiChain Solutions",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+    name: "Jennifer Wang",
+    role: "VP of Engineering at TechFlow",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #LogiTech&apos;s supply chain optimization tools have drastically
-        reduced our operational costs.
-        <Highlight>
-          Efficiency and accuracy in logistics have never been better.
-        </Highlight>{" "}
+        MajlisDev's SaaS development expertise is unmatched.
+        <Highlight>Our platform handles complex workflows beautifully.</Highlight>
+        The user management and permissions system is perfect.
       </p>
     ),
   },
   {
-    name: "Carlos Gomez",
-    role: "Head of R&D at EcoInnovate",
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+    name: "Robert Taylor",
+    role: "Director at InnovateLabs",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        By integrating #GreenTech&apos;s sustainable energy solutions,
-        we&apos;ve seen a significant reduction in carbon footprint.
-        <Highlight>
-          Leading the way in eco-friendly business practices.
-        </Highlight>{" "}
-        Pioneering change in the industry.
+        The SaaS platform development process was smooth and professional.
+        <Highlight>Integration with third-party services exceeded expectations.</Highlight>
+        Our analytics dashboard provides incredible insights.
       </p>
     ),
   },
   {
-    name: "Aisha Khan",
-    role: "Chief Marketing Officer at Fashion Forward",
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop&crop=face",
+    name: "Amanda Foster",
+    role: "CEO at CloudBridge",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #TrendSetter&apos;s market analysis AI has transformed how we approach
-        fashion trends.
-        <Highlight>
-          Our campaigns are now data-driven with higher customer engagement.
-        </Highlight>{" "}
-        Revolutionizing fashion marketing.
+        Working with MajlisDev on our SaaS platform was exceptional.
+        <Highlight>The multi-tenant architecture scales perfectly with our growth.</Highlight>
+        Their ongoing support is invaluable.
       </p>
     ),
   },
   {
-    name: "Tom Chen",
-    role: "Director of IT at HealthTech Solutions",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+    name: "Thomas Anderson",
+    role: "CTO at NextGen SaaS",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        Implementing #MediCareAI in our patient care systems has improved
-        patient outcomes significantly.
-        <Highlight>
-          Technology and healthcare working hand in hand for better health.
-        </Highlight>{" "}
-        A milestone in medical technology.
+        Our custom SaaS platform development exceeded all expectations.
+        <Highlight>Security, scalability, and user experience are all perfect.</Highlight>
+        We recommend MajlisDev for any SaaS project.
       </p>
     ),
   },
   {
-    name: "Sofia Patel",
-    role: "CEO at EduTech Innovations",
-    img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
+    name: "Maria Garcia",
+    role: "Product Owner at SoftwareLab",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #LearnSmart&apos;s AI-driven personalized learning plans have doubled
-        student performance metrics.
-        <Highlight>
-          Education tailored to every learner&apos;s needs.
-        </Highlight>{" "}
-        Transforming the educational landscape.
+        The SaaS platform development team understood our complex requirements.
+        <Highlight>Custom features and integrations work flawlessly.</Highlight>
+        Our customers are thrilled with the platform.
       </p>
     ),
   },
   {
-    name: "Jake Morrison",
-    role: "CTO at SecureNet Tech",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+    name: "James Wilson",
+    role: "VP of Technology at CloudScale",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        With #CyberShield&apos;s AI-powered security systems, our data
-        protection levels are unmatched.
-        <Highlight>Ensuring safety and trust in digital spaces.</Highlight>{" "}
-        Redefining cybersecurity standards.
+        MajlisDev built our enterprise SaaS platform with precision.
+        <Highlight>Performance monitoring and auto-scaling work perfectly.</Highlight>
+        The development process was transparent and efficient.
       </p>
     ),
   },
   {
-    name: "Nadia Ali",
-    role: "Product Manager at Creative Solutions",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+    name: "Karen Davis",
+    role: "Founder at TechStartup",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #DesignPro&apos;s AI has streamlined our creative process, enhancing
-        productivity and innovation.
-        <Highlight>Bringing creativity and technology together.</Highlight> A
-        game-changer for creative industries.
+        Our SaaS platform launch was a huge success thanks to MajlisDev.
+        <Highlight>The subscription management and billing integration are seamless.</Highlight>
+        We're scaling rapidly with confidence.
       </p>
     ),
   },
   {
-    name: "Omar Farooq",
-    role: "Founder at Startup Hub",
-    img: "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&h=400&fit=crop&crop=face",
+    name: "Brian Miller",
+    role: "Engineering Lead at PlatformPro",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        #VentureAI&apos;s insights into startup ecosystems have been invaluable
-        for our growth and funding strategies.
-        <Highlight>Empowering startups with data-driven decisions.</Highlight> A
-        catalyst for startup success.
+        The SaaS platform architecture is robust and well-designed.
+        <Highlight>API documentation and developer experience are excellent.</Highlight>
+        Our team can easily extend and maintain the platform.
       </p>
     ),
   },
