@@ -79,9 +79,9 @@ export default function Component() {
             Our software development platform may contain links to third-party websites or services. We are not responsible for their privacy practices or content. Please review their privacy policies separately.
           </p>
 
-          <h2 className="text-xl font-semibold">9. Children's Privacy</h2>
+          <h2 className="text-xl font-semibold">9. Children&apos;s Privacy</h2>
           <p>
-            Our software development services are not intended for children under the age of 13. We do not knowingly collect personal data from minors. If we learn we've collected such data, we will take steps to delete it promptly.
+            Our software development services are not intended for children under the age of 13. We do not knowingly collect personal data from minors. If we learn we&apos;ve collected such data, we will take steps to delete it promptly.
           </p>
 
           <h2 className="text-xl font-semibold">10. International Users</h2>

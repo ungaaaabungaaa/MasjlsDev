@@ -133,7 +133,7 @@ const testimonials = [
       <p>
         The cloud-native SaaS platform has transformed our business operations.
         <Highlight>Auto-scaling and security features are top-notch.</Highlight>
-        We couldn't be happier with the results.
+        We couldn&apos;t be happier with the results.
       </p>
     ),
   },
@@ -143,7 +143,7 @@ const testimonials = [
     img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
-        MajlisDev's SaaS development expertise is unmatched.
+        MajlisDev&apos;s SaaS development expertise is unmatched.
         <Highlight>Our platform handles complex workflows beautifully.</Highlight>
         The user management and permissions system is perfect.
       </p>
@@ -217,7 +217,7 @@ const testimonials = [
       <p>
         Our SaaS platform launch was a huge success thanks to MajlisDev.
         <Highlight>The subscription management and billing integration are seamless.</Highlight>
-        We're scaling rapidly with confidence.
+        We&apos;re scaling rapidly with confidence.
       </p>
     ),
   },

@@ -211,7 +211,7 @@ export const siteConfig = {
       question: "How long does it take to develop custom software?",
       answer: (
         <span>
-          The timeline depends on your software project's complexity and requirements. We provide
+          The timeline depends on your software project&apos;s complexity and requirements. We provide
           detailed project timelines during our initial consultation and keep you updated throughout
           the development process with regular deliverables.
         </span>
