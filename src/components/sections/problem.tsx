@@ -5,21 +5,21 @@ import { Brain, Shield, Zap } from "lucide-react";
 
 const problems = [
   {
-    title: "Creative Innovation",
+    title: "Technical Excellence",
     description:
-      "Limitless digital possibilities tailored to your vision",
+      "Cutting-edge software solutions built with modern technologies and best practices",
     icon: Brain,
   },
   {
-    title: "Rapid Deployment",
+    title: "Rapid Development",
     description:
-      "Tight deadlines? No problem! Our team ensures swift execution.",
+      "Agile development methodology ensuring faster time-to-market for your software products",
     icon: Zap,
   },
   {
-    title: "Confidentiality",
+    title: "Secure & Scalable",
     description:
-      "Your trust is our priority—what you share remains completely secure with us.",
+      "Enterprise-grade security and scalable architecture to grow with your business",
     icon: Shield,
   },
 
@@ -28,8 +28,8 @@ const problems = [
 export default function Component() {
   return (
     <Section
-      title="What We Offer!"
-      subtitle="A good design is not only aesthetically pleasing, but also functional. It should be able to solve the problem "
+      title="Why Choose Our Software Development Services"
+      subtitle="We deliver professional IT and software solutions that drive your business forward"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {problems.map((problem, index) => (

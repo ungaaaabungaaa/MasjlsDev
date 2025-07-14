@@ -17,7 +17,10 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">1. Services Provided</h2>
           <p>
-            MajlisDev offers cloud-based Software as a Service (SaaS) solutions to businesses and individuals. Our services are designed to help you manage and automate digital workflows, operations, and customer experiences efficiently.
+            MajlisDev provides custom software development services including web applications, mobile app development, 
+            SaaS platform development, e-commerce solutions, enterprise software, API integrations, and technical consulting. 
+            All our services fall under the IT and Software category and are designed to deliver scalable, secure, and 
+            high-performance software solutions for businesses.
           </p>
 
           <h2 className="text-xl font-semibold">2. Eligibility</h2>
@@ -58,22 +61,31 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">8. Payment & Billing</h2>
           <p>
-            Some services may require a subscription or one-time payment. All fees are due as specified in your chosen plan. Failure to pay may result in suspension or termination of your access.
+            Our software development services may require payment through various plans. All fees for software development 
+            projects are due as specified in your chosen package or custom agreement. Failure to pay may result in 
+            suspension of development work or termination of software services.
           </p>
 
           <h2 className="text-xl font-semibold">9. Subscription Renewals & Cancellation</h2>
           <p>
-            Subscriptions renew automatically unless canceled prior to the renewal date. You may cancel your subscription anytime via your account dashboard. No refunds will be issued for partial billing periods.
+            For ongoing software maintenance and support subscriptions, renewals are automatic unless canceled prior to 
+            the renewal date. You may cancel your software maintenance subscription anytime via your account dashboard. 
+            No refunds will be issued for partial billing periods of software services.
           </p>
 
           <h2 className="text-xl font-semibold">10. Intellectual Property</h2>
           <p>
-            All materials, code, trademarks, logos, and content within our platform are the intellectual property of MajlisDev or its licensors. You may not copy, reproduce, distribute, or create derivative works without explicit permission.
+            All software code, technical documentation, system architecture, and proprietary software solutions developed 
+            by MajlisDev are our intellectual property or that of our licensors. Upon full payment, you receive appropriate 
+            usage rights to the software as specified in your service agreement. You may not redistribute, reverse engineer, 
+            or create derivative works without explicit permission.
           </p>
 
-          <h2 className="text-xl font-semibold">11. Feedback & Suggestions</h2>
+          <h2 className="text-xl font-semibold">11. Software Development Feedback</h2>
           <p>
-            If you submit ideas, suggestions, or feedback to us, you grant MajlisDev a non-exclusive, royalty-free, worldwide license to use, modify, and incorporate it into our services without obligation.
+            If you submit technical requirements, feature requests, or feedback regarding our software development services, 
+            you grant MajlisDev a non-exclusive, royalty-free, worldwide license to use, modify, and incorporate such 
+            feedback into our software development processes and future projects.
           </p>
 
           <h2 className="text-xl font-semibold">12. Termination</h2>

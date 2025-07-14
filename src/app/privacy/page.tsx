@@ -12,7 +12,7 @@ export default function Component() {
         <h1 className="text-4xl font-bold mb-6 text-center">Privacy Policy</h1>
         <div className="space-y-6 text-sm md:text-base text-gray-700 dark:text-gray-300">
           <p className="text-center">
-            At MajlisDev, your privacy is important to us. This Privacy Policy describes how we collect, use, and protect your personal information when you use our website and software-as-a-service (SaaS) platform.
+            At MajlisDev, your privacy is important to us. This Privacy Policy describes how we collect, use, and protect your personal information when you use our software development services and IT solutions platform.
           </p>
 
           <h2 className="text-xl font-semibold">1. Information We Collect</h2>
@@ -29,12 +29,12 @@ export default function Component() {
           <h2 className="text-xl font-semibold">2. How We Use Your Information</h2>
           <p>We use the information we collect to:</p>
           <ul className="list-disc pl-6">
-            <li>Provide and maintain our services</li>
-            <li>Process transactions and send billing notifications</li>
-            <li>Respond to customer inquiries and offer support</li>
-            <li>Send updates, promotional messages, or newsletters (you can opt out anytime)</li>
-            <li>Improve user experience through analytics and feedback</li>
-            <li>Prevent fraudulent or unauthorized use</li>
+            <li>Provide and maintain our software development services</li>
+            <li>Process transactions and send billing notifications for software projects</li>
+            <li>Respond to technical support inquiries and provide software assistance</li>
+            <li>Send updates about our software development services and technical newsletters</li>
+            <li>Improve our software development processes through analytics and feedback</li>
+            <li>Prevent fraudulent or unauthorized use of our software services</li>
           </ul>
 
           <h2 className="text-xl font-semibold">3. How We Share Your Information</h2>
@@ -42,15 +42,15 @@ export default function Component() {
             We do not sell or rent your personal information. However, we may share it with:
           </p>
           <ul className="list-disc pl-6">
-            <li>Trusted third-party service providers who assist in delivering our services</li>
-            <li>Payment processors Razorpay</li>
+            <li>Trusted third-party service providers who assist in delivering our software development services</li>
+            <li>Payment processors (such as Razorpay) for processing payments for our software development projects</li>
             <li>Government authorities or law enforcement if legally required</li>
             <li>In connection with a business transaction such as a merger or acquisition</li>
           </ul>
 
           <h2 className="text-xl font-semibold">4. Data Security</h2>
           <p>
-            We implement industry-standard security measures, including encryption, firewalls, and secure server protocols to protect your data. However, no method of transmission over the internet is 100% secure.
+            We implement industry-standard security measures, including encryption, firewalls, and secure server protocols to protect your data and any software-related information. However, no method of transmission over the internet is 100% secure.
           </p>
 
           <h2 className="text-xl font-semibold">5. Cookies & Tracking Technologies</h2>
@@ -71,22 +71,22 @@ export default function Component() {
 
           <h2 className="text-xl font-semibold">7. Data Retention</h2>
           <p>
-            We retain your information only as long as necessary to provide services, comply with legal obligations, resolve disputes, and enforce agreements.
+            We retain your information only as long as necessary to provide our software development services, comply with legal obligations, resolve disputes, and enforce agreements related to our IT and software services.
           </p>
 
           <h2 className="text-xl font-semibold">8. Third-Party Links</h2>
           <p>
-            Our platform may contain links to third-party websites or services. We are not responsible for their privacy practices or content. Please review their privacy policies separately.
+            Our software development platform may contain links to third-party websites or services. We are not responsible for their privacy practices or content. Please review their privacy policies separately.
           </p>
 
-          <h2 className="text-xl font-semibold">9. Children’s Privacy</h2>
+          <h2 className="text-xl font-semibold">9. Children's Privacy</h2>
           <p>
-            Our services are not intended for children under the age of 13. We do not knowingly collect personal data from minors. If we learn we’ve collected such data, we will take steps to delete it promptly.
+            Our software development services are not intended for children under the age of 13. We do not knowingly collect personal data from minors. If we learn we've collected such data, we will take steps to delete it promptly.
           </p>
 
           <h2 className="text-xl font-semibold">10. International Users</h2>
           <p>
-            If you are accessing our services from outside India, please be aware that your data may be transferred to, stored, and processed in India or other countries.
+            If you are accessing our software development services from outside India, please be aware that your data may be transferred to, stored, and processed in India or other countries where our software infrastructure is located.
           </p>
 
           <h2 className="text-xl font-semibold">11. Changes to This Policy</h2>

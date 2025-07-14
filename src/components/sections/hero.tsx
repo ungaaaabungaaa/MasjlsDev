@@ -24,11 +24,11 @@ function HeroPill() {
       
       <CoolMode>
       <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-center text-xs font-medium text-primary sm:text-sm">
-       ✨ Creative Innovation
+       🚀 Software Innovation
       </div>
       </CoolMode>
       <p className="text-xs font-medium text-primary sm:text-sm">
-        Introducing MajlisDev
+        IT & Software Development
       </p>
       <svg
         width="12"
@@ -61,7 +61,7 @@ function HeroTitles() {
           staggerChildren: 0.2,
         }}
       >
-        {["From", "Dessert", "Sands", "To Digital Dreams"].map((text, index) => (
+        {["Professional", "IT &", "Software", "Development"].map((text, index) => (
           <motion.span
             key={index}
             className="inline-block px-1 md:px-2 text-balance font-semibold"
@@ -87,7 +87,7 @@ function HeroTitles() {
           ease,
         }}
       >
-        We blend artistry with technology to craft captivating digital experiences. From concept to creation, we turn imagination into innovation
+        We specialize in custom software development, SaaS platforms, mobile applications, and enterprise solutions. From web development to AI integration, we deliver scalable technology solutions for your business.
       </motion.p>
     </div>
   );
@@ -110,7 +110,7 @@ function HeroCTA() {
           )}
         >
           <Icons.palmTreeLogo className="h-6 w-6" />
-          Get Started Now
+          Start Your Project
         </Link>
       </motion.div>
       <motion.p
@@ -119,7 +119,7 @@ function HeroCTA() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0, duration: 0.8 }}
       >
-        We&apos;re here to guide and help you at all times.
+        Professional software development services tailored to your needs.
       </motion.p>
     </>
   );

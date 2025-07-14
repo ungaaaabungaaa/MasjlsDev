@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Web Devlopment",
+    title: "Web Development",
     description:
-      "Building tailored websites to meet unique business requirements, Ensuring seamless user experiences across all devices & screen sizes",
+      "Building custom web applications and websites using modern technologies. Responsive, scalable, and optimized for performance across all devices.",
     className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
     content: (
       <>
@@ -24,9 +24,9 @@ const features = [
     ),
   },
   {
-    title: "App Development",
+    title: "Mobile App Development",
     description:
-      "Creating intuitive apps for iOS and Android to enhance user engagement, Developing applications that perform flawlessly on multiple platforms.",
+      "Creating native and cross-platform mobile applications for iOS and Android. Full-stack development with backend integration and API services.",
     className:
       "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
     content: (
@@ -38,9 +38,9 @@ const features = [
     ),
   },
   {
-    title: "Eccommerce Store",
+    title: "E-commerce Software",
     description:
-      "Launching fully functional eCommerce websites tailored to your brand.",
+      "Custom e-commerce platforms with secure payment processing, inventory management, and admin dashboards. Built for scalability and performance.",
     className:
       "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
     content: (
@@ -64,9 +64,9 @@ const features = [
     ),
   },
   {
-    title: "SASS Applications",
+    title: "SaaS Platform Development",
     description:
-      "Delivering scalable and secure software solutions for subscription-based models, Connecting services and applications for improved functionality and user experience",
+      "Building Software-as-a-Service platforms with multi-tenant architecture, subscription management, API integrations, and comprehensive admin panels.",
     className:
       "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
     content: (
@@ -85,9 +85,9 @@ const features = [
 export default function Component() {
   return (
     <Section
-      title="Approach"
-      subtitle="Empower Your Business with Tailored Development"
-      description="Generic platforms won't meet your needs. Our agency focuses on delivering custom web development services specifically designed to align with your unique business objectives and enhance your online presence."
+      title="Our Expertise"
+      subtitle="Professional Software Development Services"
+      description="We specialize in custom software development tailored to your business needs. Our solutions are built using cutting-edge technologies and industry best practices to ensure scalability, security, and performance."
       className="bg-neutral-100 dark:bg-neutral-900"
     >
       <div className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-gray-500 md:max-w-3xl md:grid-cols-2 xl:grid-rows-2 md:grid-rows-3 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">

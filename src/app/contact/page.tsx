@@ -116,7 +116,7 @@ export default function ContactPage() {
               Thank You!
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
+              Your software development inquiry has been sent successfully. Our technical team will get back to you within 24 hours with a detailed proposal.
             </p>
             <Button 
               onClick={() => setSubmitted(false)}
@@ -145,8 +145,8 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a question or want to work together? We&apos;d love to hear from you. 
-            Send us a message and we&apos;ll respond as soon as possible.
+            Have a software development project or need technical consultation? We&apos;d love to hear from you. 
+            Send us your requirements and we&apos;ll respond with a detailed technical proposal.
           </p>
         </div>
 
@@ -197,11 +197,11 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="query">Query</Label>
+                <Label htmlFor="query">Project Requirements</Label>
                 <textarea
                   id="query"
                   name="query"
-                  placeholder="Tell us about your project or ask us anything..."
+                  placeholder="Tell us about your software development needs, technical requirements, or ask us about our IT services..."
                   value={formData.query}
                   onChange={handleInputChange}
                   rows={6}
@@ -228,7 +228,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <Icons.palmTreeLogo className="mr-2 h-4 w-4" />
-                     Helping You in One Step
+                     Submit Software Requirements
                   </>
                 )}
               </Button>

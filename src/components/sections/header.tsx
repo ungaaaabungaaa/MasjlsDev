@@ -60,7 +60,7 @@ export default function Header() {
                 )}
               >
                 <Icons.palmTreeLogo className="h-6 w-6 text-white" />
-                Get Started Now
+                Start Your Project
               </Link>
             </div>
           </div>
