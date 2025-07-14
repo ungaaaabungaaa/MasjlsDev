@@ -61,7 +61,8 @@ export default function CheckoutPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: 9600000, // amount in paise (₹96,000)
+          // amount: 9600000, // amount in paise (₹96,000)
+          amount: 1000, // amount in paise (₹96,000)
           currency: 'INR',
           receipt: `receipt_${Date.now()}`,
           notes: {
