@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { CheckCircle, AlertCircle } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -33,6 +35,7 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -80,6 +83,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
     
     if (!validateForm()) {
       return;
@@ -95,7 +99,7 @@ export default function ContactPage() {
       setFormData({ name: "", email: "", query: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
-      // Handle error - you might want to show an error message
+      setSubmitError("Failed to submit form. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -106,6 +110,13 @@ export default function ContactPage() {
       <>
         <Header />
         <div className="px-4 py-16 md:px-24 max-w-4xl mx-auto">
+          <Alert className="mb-8" variant="default">
+            <CheckCircle className="h-4 w-4" />
+            <AlertTitle>Success!</AlertTitle>
+            <AlertDescription>
+              Your message has been sent successfully. We'll get back to you soon.
+            </AlertDescription>
+          </Alert>
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
               <div className="rounded-full bg-primary/10 p-3">
@@ -137,6 +148,13 @@ export default function ContactPage() {
     <>
       <Header />
       <div className="px-4 py-12 md:px-24 max-w-4xl mx-auto">
+        {submitError && (
+          <Alert className="mb-8" variant="destructive">
+            <AlertCircle className="h-4 w-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>{submitError}</AlertDescription>
+          </Alert>
+        )}
         <div className="text-center space-y-4 mb-8">
           <h2 className="text-sm text-primary font-mono font-medium tracking-wider uppercase">
             Contact

@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icons } from "@/components/icons";
 import { useRouter } from "next/navigation";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircle, CheckCircle } from "lucide-react";
 
 // Razorpay types
 declare global {
@@ -31,6 +33,7 @@ export default function CheckoutPage() {
   });
   const [isProcessing, setIsProcessing] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [paymentError, setPaymentError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -49,11 +52,12 @@ export default function CheckoutPage() {
   const handleRazorpayPayment = async () => {
     // Validate billing information
     if (!billingInfo.email || !billingInfo.firstName || !billingInfo.lastName) {
-      alert("Please fill in all required billing information.");
+      setPaymentError("Please fill in all required billing information.");
       return;
     }
 
     setIsProcessing(true);
+    setPaymentError(null);
 
     try {
       // Create order on your backend
@@ -63,8 +67,7 @@ export default function CheckoutPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          // amount: 9600000, // amount in paise (₹96,000)
-          amount: 1000, // amount in paise (₹96,000)
+          amount: 9600000, // amount in paise (₹96,000)
           currency: 'INR',
           receipt: `receipt_${Date.now()}`,
           notes: {
@@ -132,14 +135,14 @@ export default function CheckoutPage() {
       rzp.on('payment.failed', function (response: any) {
         console.error("Payment failed:", response);
         setIsProcessing(false);
-        alert("Payment failed. Please try again.");
+        setPaymentError("Payment failed. Please try again.");
       });
 
       rzp.open();
     } catch (error) {
       console.error("Error creating order:", error);
+      setPaymentError("An error occurred while processing your payment. Please try again.");
       setIsProcessing(false);
-      alert("An error occurred. Please try again.");
     }
   };
 
@@ -149,6 +152,24 @@ export default function CheckoutPage() {
       
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
+          {paymentError && (
+            <Alert className="mb-8" variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Payment Error</AlertTitle>
+              <AlertDescription>{paymentError}</AlertDescription>
+            </Alert>
+          )}
+          
+          {paymentSuccess && (
+            <Alert className="mb-8" variant="default">
+              <CheckCircle className="h-4 w-4" />
+              <AlertTitle>Payment Successful!</AlertTitle>
+              <AlertDescription>
+                Your payment has been processed successfully. You will be redirected to the confirmation page.
+              </AlertDescription>
+            </Alert>
+          )}
+
           <div className="mb-8 flex flex-col items-center justify-center">
             <Icons.palmTreeLogo className="h-12 w-12" />
             <h1 className="text-3xl font-bold text-center mb-2">OneClick CheckOut</h1>
