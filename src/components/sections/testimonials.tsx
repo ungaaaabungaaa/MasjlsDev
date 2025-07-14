@@ -90,7 +90,6 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "CEO at CloudTech Solutions",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev built our SaaS platform with exceptional multi-tenant architecture.
@@ -104,7 +103,6 @@ const testimonials = [
   {
     name: "Michael Chen",
     role: "CTO at DataFlow Systems",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development team delivered exactly what we needed.
@@ -116,7 +114,6 @@ const testimonials = [
   {
     name: "Lisa Rodriguez",
     role: "Founder at StartupLaunch",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         As a startup, we needed a robust SaaS platform quickly.
@@ -128,7 +125,6 @@ const testimonials = [
   {
     name: "David Kim",
     role: "Product Manager at ScaleUp Inc",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The cloud-native SaaS platform has transformed our business operations.
@@ -140,7 +136,6 @@ const testimonials = [
   {
     name: "Jennifer Wang",
     role: "VP of Engineering at TechFlow",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev&apos;s SaaS development expertise is unmatched.
@@ -152,7 +147,6 @@ const testimonials = [
   {
     name: "Robert Taylor",
     role: "Director at InnovateLabs",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development process was smooth and professional.
@@ -164,7 +158,6 @@ const testimonials = [
   {
     name: "Amanda Foster",
     role: "CEO at CloudBridge",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Working with MajlisDev on our SaaS platform was exceptional.
@@ -176,7 +169,6 @@ const testimonials = [
   {
     name: "Thomas Anderson",
     role: "CTO at NextGen SaaS",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Our custom SaaS platform development exceeded all expectations.
@@ -188,7 +180,6 @@ const testimonials = [
   {
     name: "Maria Garcia",
     role: "Product Owner at SoftwareLab",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform development team understood our complex requirements.
@@ -200,7 +191,6 @@ const testimonials = [
   {
     name: "James Wilson",
     role: "VP of Technology at CloudScale",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         MajlisDev built our enterprise SaaS platform with precision.
@@ -212,7 +202,6 @@ const testimonials = [
   {
     name: "Karen Davis",
     role: "Founder at TechStartup",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         Our SaaS platform launch was a huge success thanks to MajlisDev.
@@ -224,7 +213,6 @@ const testimonials = [
   {
     name: "Brian Miller",
     role: "Engineering Lead at PlatformPro",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     description: (
       <p>
         The SaaS platform architecture is robust and well-designed.
@@ -243,8 +231,8 @@ export default function Testimonials() {
       className="max-w-8xl"
     >
       <div className="relative mt-6 max-h-screen overflow-hidden">
-        <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
-          {Array(Math.ceil(testimonials.length / 3))
+        <div className="gap-4 md:columns-3 xl:columns-3 2xl:columns-4">
+          {Array(3)
             .fill(0)
             .map((_, i) => (
               <Marquee
@@ -253,10 +241,10 @@ export default function Testimonials() {
                 className={cn({
                   "[--duration:60s]": i === 1,
                   "[--duration:30s]": i === 2,
-                  "[--duration:70s]": i === 3,
+                  "[--duration:70s]": i === 0,
                 })}
               >
-                {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
+                {testimonials.filter((_, idx) => idx % 3 === i).map((card, idx) => (
                   <motion.div
                     key={idx}
                     initial={{ opacity: 0 }}
