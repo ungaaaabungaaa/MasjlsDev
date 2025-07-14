@@ -77,12 +77,6 @@ export const siteConfig = {
             href: "#",
             description: "Creating compelling visual stories that captivate audiences.",
           },
-          {
-            title: "Email Marketing",
-            href: "#",
-            description:
-              "Driving conversions with personalized, impactful campaigns.",
-          },
         ],
       },
     },
@@ -163,7 +157,6 @@ export const siteConfig = {
         "User testing and feedback collection",
         "3 design revisions",
         "Mobile and tablet optimization",
-        "Email marketing template & SMTP Setup",
         "Creation of social media profiles",
         "20-Min training session",
         "Basic security setup & monitoring",
@@ -207,15 +200,6 @@ export const siteConfig = {
           Our pricing structure varies based on the specific services and project
           requirements. We offer several packages tailored to different needs, and we
           can provide a detailed quote after discussing your project with us.
-        </span>
-      ),
-    },
-    {
-      question: "Do you offer a money-back guarantee?",
-      answer: (
-        <span>
-          No, we Dont offer any money-back guarantee on our services. If you are not
-          satisfied with our work we can provide a fee revision.
         </span>
       ),
     },
@@ -270,21 +254,6 @@ export const siteConfig = {
     },
   ],
   footer: [ 
-    {
-      title: "Social",
-      links: [
-        {
-          href: "https://www.instagram.com/majlisdev/",
-          text: "Instagram",
-          icon: <RiInstagramFill />,
-        },
-        {
-          href: "https://github.com/MajlisDevTM",
-          text: "Github",
-          icon: <FaGithub />,
-        },
-      ],
-    },
   ],
 };
 
