@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Header from "@/components/sections/header";
 import Footer from "@/components/sections/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Testimonials from "@/components/sections/testimonials";
 import CTA from "@/components/sections/cta";
+import { useSearchParams } from "next/navigation";
 
 // Test data for development
 const TEST_DATA = {
@@ -19,7 +20,7 @@ const TEST_DATA = {
   amount: "96,000.00"
 };
 
-export default function ThankYouPage() {
+function OrderDetails() {
   const searchParams = useSearchParams();
   
   // Use URL params if available, otherwise use test data
@@ -31,6 +32,40 @@ export default function ThankYouPage() {
     amount: searchParams.get("amount") || TEST_DATA.amount,
   };
 
+  return (
+    <Card className="mb-8">
+      <CardHeader>
+        <CardTitle>Order Details</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="grid gap-3">
+          <div className="flex justify-between py-2 border-b">
+            <span className="text-muted-foreground">Name</span>
+            <span className="font-medium">{orderDetails.name}</span>
+          </div>
+          <div className="flex justify-between py-2 border-b">
+            <span className="text-muted-foreground">Email</span>
+            <span className="font-medium">{orderDetails.email}</span>
+          </div>
+          <div className="flex justify-between py-2 border-b">
+            <span className="text-muted-foreground">Order ID</span>
+            <span className="font-medium">{orderDetails.orderId}</span>
+          </div>
+          <div className="flex justify-between py-2 border-b">
+            <span className="text-muted-foreground">Payment ID</span>
+            <span className="font-medium">{orderDetails.paymentId}</span>
+          </div>
+          <div className="flex justify-between py-2">
+            <span className="text-muted-foreground">Amount Paid</span>
+            <span className="font-medium">₹{orderDetails.amount}</span>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default function ThankYouPage() {
   return (
     <>
       <Header />
@@ -49,35 +84,9 @@ export default function ThankYouPage() {
               </p>
             </div>
 
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Order Details</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid gap-3">
-                  <div className="flex justify-between py-2 border-b">
-                    <span className="text-muted-foreground">Name</span>
-                    <span className="font-medium">{orderDetails.name}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b">
-                    <span className="text-muted-foreground">Email</span>
-                    <span className="font-medium">{orderDetails.email}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b">
-                    <span className="text-muted-foreground">Order ID</span>
-                    <span className="font-medium">{orderDetails.orderId}</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b">
-                    <span className="text-muted-foreground">Payment ID</span>
-                    <span className="font-medium">{orderDetails.paymentId}</span>
-                  </div>
-                  <div className="flex justify-between py-2">
-                    <span className="text-muted-foreground">Amount Paid</span>
-                    <span className="font-medium">₹{orderDetails.amount}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <Suspense fallback={<div>Loading order details...</div>}>
+              <OrderDetails />
+            </Suspense>
 
             <div className="flex flex-col items-center gap-4">
               <p className="text-sm text-muted-foreground">
@@ -88,7 +97,6 @@ export default function ThankYouPage() {
                   Return to Home
                 </Link>
               </Button>
-              
             </div>
           </div>
         </div>

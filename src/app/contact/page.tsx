@@ -114,7 +114,7 @@ export default function ContactPage() {
             <CheckCircle className="h-4 w-4" />
             <AlertTitle>Success!</AlertTitle>
             <AlertDescription>
-              Your message has been sent successfully. We'll get back to you soon.
+              Your message has been sent successfully. We&apos;ll get back to you soon.
             </AlertDescription>
           </Alert>
           <div className="text-center space-y-4">
