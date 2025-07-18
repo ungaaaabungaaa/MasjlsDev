@@ -67,7 +67,7 @@ export default function CheckoutPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: 9600000, // amount in paise (₹96,000)
+          amount: 5000000, // amount in paise (₹50,000)
           currency: 'INR',
           receipt: `receipt_${Date.now()}`,
           notes: {
@@ -118,7 +118,7 @@ export default function CheckoutPage() {
             email: billingInfo.email,
             orderId: response.razorpay_order_id,
             paymentId: response.razorpay_payment_id,
-            amount: "96,000.00"
+            amount: "50,000.00"
           });
           
           router.push(`/thank?${searchParams.toString()}`);
@@ -345,7 +345,7 @@ export default function CheckoutPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold">₹96,000.00</p>
+                      <p className="font-semibold">₹50,000.00</p>
                     </div>
                   </div>
                 </CardContent>
@@ -376,24 +376,24 @@ export default function CheckoutPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span>₹92,200.00</span>
+                      <span>₹48,021.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Additional Charges 3%</span>
-                      <span>₹2,766.00</span>
+                      <span>₹1,441.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Tax (18%)</span>
-                      <span>₹16,596.00</span>
+                      <span>₹8,644.00</span>
                     </div>
                     <div className="flex justify-between ">
                       <span>Discount</span>
-                      <span>-₹15,562.00</span>
+                      <span>-₹8,106.00</span>
                     </div>
                     <hr className="my-3" />
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total</span>
-                      <span>₹96,000.00</span>
+                      <span>₹50,000.00</span>
                     </div>
                      <p className="text-xs text-center">
                       Your payment is secured by Razorpay&apos;s advanced encryption and security protocols.
